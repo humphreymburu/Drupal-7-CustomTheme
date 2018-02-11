@@ -4,9 +4,9 @@ package = Core
 core = 7.x
 
 ;styles - General
-stylesheets[all][] = style.css
-stylesheets[all][]  = ie.css
-stylesheets[print][] = print.css
+stylesheets[all][] = assets/stylesheets/screen.css
+stylesheets[all][]  = assets/stylesheets/ie.css
+stylesheets[print][] = assets/stylesheets/print.css
 
 ; Regions
 regions[help] = Help
@@ -16,5 +16,5 @@ regions[branding] = Branding
 regions[navigation] = Navigation
 regions[content] = Content
 regions[sidebar_first] = Sidebar First
-regions[sidebar_second] = Sidebar second
+regions[sidebar_second] = Sidebar Second
 regions[footer] = Footer
