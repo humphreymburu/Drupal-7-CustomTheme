@@ -1,0 +1,81 @@
+// Media queries breakpoints
+
+// Here we define the breakpoints which will become the upper border for each media size.
+// The function em-calc() calculates the em-value from a px-value.
+
+$small-point:  em-calc(640)  !default;
+$medium-point: em-calc(1024) !default;
+$large-point:  em-calc(1440) !default;
+$xlarge-point: em-calc(1920) !default;
+
+// Here we define the lower and upper bounds for each media size
+
+$small-tide:   (0, $small-point) !default; 
+$medium-tide:  ($small-point  + em-calc(1), $medium-point) !default; 
+$large-tide:   ($medium-point + em-calc(1), $large-point)  !default; 
+$xlarge-tide:  ($large-point  + em-calc(1), $xlarge-point) !default; 
+$xxlarge-tide: ($xlarge-point + em-calc(1), em-calc(99999999)) !default; 
+
+// Media Queries
+
+$screen: "only screen" !default;
+
+$landscape: "#{$screen} and (orientation: landscape)" !default;
+$portrait: "#{$screen} and (orientation: portrait)" !default;
+
+$small-up: $screen !default;
+$small-only: "#{$screen} and (max-width:#{upper-bound($small-tide)})" !default;
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-tide)})" !default;
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-tide)}) and (max-width:#{upper-bound($medium-tide)})" !default;
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-tide)})" !default;
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-tide)}) and (max-width:#{upper-bound($large-tide)})" !default;
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-tide)})" !default;
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-tide)}) and (max-width:#{upper-bound($xlarge-tide)})" !default;
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-tide)})" !default;
+//$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
+
+
+// Various global styles
+
+$body-bg: #fff;
+$body-font-color: #5b6172;
+//$body-font-family: "Open Sans", Arial, sans-serif;
+$body-font-weight: normal;
+$body-font-style: normal;
+
+// Font-smoothing
+
+$font-smoothing: antialiased;
+
+// Text direction settings
+
+$text-direction: ltr;
+
+// Colors
+
+$main-color: #575656;
+$minor-color: #5b6172;
+
+//
+// Typography Variables
+//
+
+// Control header font styles
+
+$head-font-family: "Source Sans Pro", Arial, sans-serif;
+$head-font-weight: bold;
+$head-font-style: normal;
+$head-font-color: #563521;
+$head-line-height: 1.4;
+$head-top-margin: .2em;
+$head-bottom-margin: .5em;
+$head-text-rendering: optimizeLegibility;
+
+// Control header font sizes
+
+$h1-font-size: em-calc(40);
+$h2-font-size: em-calc(30);
+$h3-font-size: em-calc(20);
+$h4-font-size: em-calc(10);
+$h5-font-size: em-calc(5);
+$h6-font-size: 1em;
