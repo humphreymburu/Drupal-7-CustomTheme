@@ -1,0 +1,7 @@
+// Mixins
+
+@mixin openTransition($type: all, $speed: 0.25s, $transition: ease-in-out) {
+    transition: $type $speed $transition;
+     -moz-transition: $type $speed $transition;
+     -webkit-transition: $type $speed $transition;
+    }
