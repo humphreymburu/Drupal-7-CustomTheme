@@ -6,6 +6,11 @@ sites/*/private
 .DS_Store
 .htaccess
 
+*.html humans.txt robots.txt
+.sass-cache
+.sass-cache/
+
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
