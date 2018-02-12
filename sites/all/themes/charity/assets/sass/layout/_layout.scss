@@ -1,0 +1,163 @@
+
+
+
+
+   /* Layout with CSS Grid */
+	@supports (display: grid) {
+		
+				/* Four-column layout. Two center columns have a total max width of 50em: */
+				.grid {
+					display: grid;
+					grid-template-columns: 1fr repeat(2, minmax(auto, 40em)) 1fr;
+				}
+		
+				/* Center items by placing them in the two center columns: */
+				
+				.col-2__title {
+					grid-column: 1/4;
+			}
+
+			.col-1__title {
+				grid-column: 1/4;
+		}
+			
+				
+			.col-2 ul {
+				grid-column: 2/4;
+			}
+			.col-1 ul {
+				grid-column: 1/4;
+	  	}
+			
+			.buckets ul {
+				grid-column: 1/4;
+		  }
+				.region-content {
+					padding: 1.5em;
+				}
+
+				.region-content__color {
+					background: #FFF6E5;
+					padding-bottom: 2em;
+				}
+				 
+		
+			}
+		
+
+	
+
+	.splash-text {
+		columns: 2;
+		column-gap: 2em;
+	}
+
+	.col-1__text p {
+		padding-top: 0;
+	}
+
+
+/* Buckets section */
+
+.buckets {
+	padding: 2em 1em 1em;
+	background: #3E454C;
+}
+
+.buckets ul {
+	margin: 0;
+	padding: 0;
+}
+
+.buckets li {
+	margin-bottom: 1em;
+	background: white;
+	list-style-type: none;
+}
+
+.bucket {
+	padding: 1.5em;
+}
+
+
+.col-1 {
+	padding: 2em 1em 1em;
+}
+
+.col-1  ul {
+	margin: 0;
+	padding: 0;
+}
+
+.col-1  li {
+	margin-bottom: 1em;
+	background: white;
+	list-style-type: none;
+}
+
+.col-1  {
+	padding: 1.5em;
+}
+
+
+.col-1  {
+	padding: 2em 1em 1em;
+
+}
+
+.col-1  ul {
+	margin: 0;
+	padding: 0;
+}
+
+.col-1  li {
+	margin-bottom: 1em;
+	background: white;
+	list-style-type: none;
+}
+
+.col-1 {
+  padding: 1.5em;
+}
+
+
+
+
+
+@supports (display: flex) {
+	
+
+
+.col-2 ul {
+	display: flex;
+	justify-content: space-around;
+}	
+
+
+.col-2 li {
+		width: 33%;
+}
+		
+.col-1 ul {
+	display: flex;
+	justify-content: space-around;
+}
+	
+.col-1 li {
+	width: 24%;
+}
+
+}
+		.logo,
+		.site-title {
+			text-align: center;
+		}
+		
+		.logo {
+			font-size: 8em;
+		}
+		
+		.site-title {
+			margin-top: -1em;
+			margin-bottom: 3em;
+		}
