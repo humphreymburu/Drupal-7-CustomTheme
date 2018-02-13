@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+## branding
+--------------------------------------------------------------*/
+
+.branding {}
+.branding__logo {
+    width: 165px;
+    height: 25px;
+}
+.branding__logo {
+    width: 165px;
+    height: 25px;
+    
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-shadow: none;
+      color: transparent;
+    }
+}
+.branding__title, .branding__slogan {
+    margin: 0;
+    line-height: 1em;
+}
+
+
+

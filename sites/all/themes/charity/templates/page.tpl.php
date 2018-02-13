@@ -20,7 +20,23 @@
 ?>
   <header class="l-header">
       <div class="col-1">
-      <div class="logo">open charity</div>
+      
+      <div class="branding">
+             <?php if (theme_get_setting('branding_type') == 'logo'): ?>
+                <div class="branding__logo">
+                    <a href="<?php print base_path();?>"><img src="<?php print file_create_url(theme_get_setting('bg_path')); ?>" /></a></div>
+            <?php endif; ?>
+            <?php if (theme_get_setting('branding_type') == 'text'): ?>
+            <a href="<?php print base_path();?>">
+              <h1 class="branding__text"><?php print variable_get('site_name'); ?></h1>
+              <h2 class="branding__slogan"><?php print variable_get('site_slogan'); ?></h2>
+            </a>
+            <?php endif; ?>
+        </div>
+
+
+
+
       </div>
   </header><!-- .header -->
   
