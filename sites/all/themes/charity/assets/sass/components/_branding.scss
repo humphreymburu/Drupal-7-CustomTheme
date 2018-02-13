@@ -2,7 +2,9 @@
 ## branding
 --------------------------------------------------------------*/
 
-.branding {}
+.branding {
+    width: 50%;
+}
 .branding__logo {
     width: 165px;
     height: 25px;
@@ -17,6 +19,9 @@
       height: 100%;
       text-shadow: none;
       color: transparent;
+      color: transparent;
+      line-height: 60px;
+      margin: 0.3125em;
     }
 }
 .branding__title, .branding__slogan {

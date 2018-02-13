@@ -5,10 +5,15 @@
    /* Layout with CSS Grid */
 	@supports (display: grid) {
 		
-				/* Four-column layout. Two center columns have a total max width of 50em: */
+				/* Four-column layout. Two center columns have a total max width of 70em: */
 				.grid {
 					display: grid;
-					grid-template-columns: 1fr repeat(2, minmax(auto, 40em)) 1fr;
+					grid-template-columns: 1fr repeat(2, minmax(auto, 60em)) 1fr;
+				}
+
+				.l-header__inner {
+					grid-column: 2/4;
+					padding: 0.625em 0.625em 0.625em 5em;
 				}
 		
 				/* Center items by placing them in the two center columns: */
@@ -28,18 +33,7 @@
 			.col-1 ul {
 				grid-column: 1/4;
 	  	}
-			
-			.buckets ul {
-				grid-column: 1/4;
-		  }
-				.region-content {
-					padding: 1.5em;
-				}
 
-				.region-content__color {
-					background: #FFF6E5;
-					padding-bottom: 2em;
-				}
 				 
 		
 			}
@@ -104,7 +98,11 @@
 
 @supports (display: flex) {
 	
-
+.l-header__inner{
+	display: flex;
+	justify-content: space-between;
+	padding: 0.625em 5em 0.625em 5em;
+}
 
 .col-2 ul {
 	display: flex;
@@ -126,16 +124,3 @@
 }
 
 }
-		.logo,
-		.site-title {
-			text-align: center;
-		}
-		
-		.logo {
-			font-size: 8em;
-		}
-		
-		.site-title {
-			margin-top: -1em;
-			margin-bottom: 3em;
-		}

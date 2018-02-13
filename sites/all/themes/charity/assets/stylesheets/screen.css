@@ -106,172 +106,202 @@ a:hover {
 
 /* Layout with CSS Grid */
 @supports (display: grid) {
-  /* Four-column layout. Two center columns have a total max width of 50em: */
+  /* Four-column layout. Two center columns have a total max width of 70em: */
   /* line 9, ../sass/layout/_layout.scss */
   .grid {
     display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 40em)) 1fr;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 60em)) 1fr;
+  }
+
+  /* line 14, ../sass/layout/_layout.scss */
+  .l-header__inner {
+    grid-column: 2/4;
+    padding: 0.625em 0.625em 0.625em 5em;
   }
 
   /* Center items by placing them in the two center columns: */
-  /* line 16, ../sass/layout/_layout.scss */
+  /* line 21, ../sass/layout/_layout.scss */
   .col-2__title {
     grid-column: 1/4;
   }
 
-  /* line 20, ../sass/layout/_layout.scss */
+  /* line 25, ../sass/layout/_layout.scss */
   .col-1__title {
     grid-column: 1/4;
   }
 
-  /* line 25, ../sass/layout/_layout.scss */
+  /* line 30, ../sass/layout/_layout.scss */
   .col-2 ul {
     grid-column: 2/4;
   }
 
-  /* line 28, ../sass/layout/_layout.scss */
+  /* line 33, ../sass/layout/_layout.scss */
   .col-1 ul {
     grid-column: 1/4;
   }
-
-  /* line 32, ../sass/layout/_layout.scss */
-  .buckets ul {
-    grid-column: 1/4;
-  }
-
-  /* line 35, ../sass/layout/_layout.scss */
-  .region-content {
-    padding: 1.5em;
-  }
-
-  /* line 39, ../sass/layout/_layout.scss */
-  .region-content__color {
-    background: #FFF6E5;
-    padding-bottom: 2em;
-  }
 }
-/* line 50, ../sass/layout/_layout.scss */
+/* line 44, ../sass/layout/_layout.scss */
 .splash-text {
   columns: 2;
   column-gap: 2em;
 }
 
-/* line 55, ../sass/layout/_layout.scss */
+/* line 49, ../sass/layout/_layout.scss */
 .col-1__text p {
   padding-top: 0;
 }
 
-/* line 61, ../sass/layout/_layout.scss */
+/* line 55, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 2em 1em 1em;
 }
 
-/* line 65, ../sass/layout/_layout.scss */
+/* line 59, ../sass/layout/_layout.scss */
 .col-1 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 70, ../sass/layout/_layout.scss */
+/* line 64, ../sass/layout/_layout.scss */
 .col-1 li {
   margin-bottom: 1em;
   background: white;
   list-style-type: none;
 }
 
-/* line 76, ../sass/layout/_layout.scss */
+/* line 70, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 1.5em;
 }
 
-/* line 81, ../sass/layout/_layout.scss */
+/* line 75, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 2em 1em 1em;
 }
 
-/* line 86, ../sass/layout/_layout.scss */
+/* line 80, ../sass/layout/_layout.scss */
 .col-1 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 91, ../sass/layout/_layout.scss */
+/* line 85, ../sass/layout/_layout.scss */
 .col-1 li {
   margin-bottom: 1em;
   background: white;
   list-style-type: none;
 }
 
-/* line 97, ../sass/layout/_layout.scss */
+/* line 91, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 1.5em;
 }
 
 @supports (display: flex) {
-  /* line 109, ../sass/layout/_layout.scss */
+  /* line 101, ../sass/layout/_layout.scss */
+  .l-header__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625em 5em 0.625em 5em;
+  }
+
+  /* line 107, ../sass/layout/_layout.scss */
   .col-2 ul {
     display: flex;
     justify-content: space-around;
   }
 
-  /* line 115, ../sass/layout/_layout.scss */
+  /* line 113, ../sass/layout/_layout.scss */
   .col-2 li {
     width: 33%;
   }
 
-  /* line 119, ../sass/layout/_layout.scss */
+  /* line 117, ../sass/layout/_layout.scss */
   .col-1 ul {
     display: flex;
     justify-content: space-around;
   }
 
-  /* line 124, ../sass/layout/_layout.scss */
+  /* line 122, ../sass/layout/_layout.scss */
   .col-1 li {
     width: 24%;
   }
 }
-/* line 129, ../sass/layout/_layout.scss */
-.logo,
-.site-title {
-  text-align: center;
-}
-
-/* line 134, ../sass/layout/_layout.scss */
-.logo {
-  font-size: 8em;
-}
-
-/* line 138, ../sass/layout/_layout.scss */
-.site-title {
-  margin-top: -1em;
-  margin-bottom: 3em;
-}
-
 /*--------------------------------------------------------------
 ## branding
 --------------------------------------------------------------*/
-/* line 6, ../sass/components/_branding.scss */
+/* line 5, ../sass/components/_branding.scss */
+.branding {
+  width: 50%;
+}
+
+/* line 8, ../sass/components/_branding.scss */
 .branding__logo {
   width: 165px;
   height: 25px;
 }
 
-/* line 10, ../sass/components/_branding.scss */
+/* line 12, ../sass/components/_branding.scss */
 .branding__logo {
   width: 165px;
   height: 25px;
 }
-/* line 14, ../sass/components/_branding.scss */
+/* line 16, ../sass/components/_branding.scss */
 .branding__logo a {
   display: block;
   width: 100%;
   height: 100%;
   text-shadow: none;
   color: transparent;
+  color: transparent;
+  line-height: 60px;
+  margin: 0.3125em;
 }
 
-/* line 22, ../sass/components/_branding.scss */
+/* line 27, ../sass/components/_branding.scss */
 .branding__title, .branding__slogan {
   margin: 0;
   line-height: 1em;
+}
+
+/*--------------------------------------------------------------
+## navigation
+--------------------------------------------------------------*/
+/* line 4, ../sass/components/_navigation.scss */
+.main-menu {
+  width: 50%;
+}
+
+/* line 7, ../sass/components/_navigation.scss */
+.navigation ul.menu {
+  text-align: right;
+}
+/* line 12, ../sass/components/_navigation.scss */
+.navigation ul.menu li {
+  display: inline-block;
+  margin-left: 33.33333px;
+}
+/* line 15, ../sass/components/_navigation.scss */
+.navigation ul.menu li a {
+  text-transform: uppercase;
+  line-height: 60px;
+  margin: 0.3125em;
+}
+/* line 20, ../sass/components/_navigation.scss */
+.navigation ul.menu li:last-child a {
+  border: solid 1px #61c0bd;
+  background-color: transparent;
+  padding: 0.75em 1.5em;
+  margin: 0 0 0.75em 0;
+  transition: background-color 200ms ease;
+  user-select: none;
+  vertical-align: middle;
+  color: #61c0bd;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+/* line 31, ../sass/components/_navigation.scss */
+.navigation ul.menu li:last-child a:hover {
+  background-color: #61c0bd;
+  color: #FFF;
 }

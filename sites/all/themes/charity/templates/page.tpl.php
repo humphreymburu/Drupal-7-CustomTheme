@@ -19,7 +19,7 @@
  */
 ?>
   <header class="l-header">
-      <div class="col-1">
+      <div class="l-header__inner grid">
       
       <div class="branding">
              <?php if (theme_get_setting('branding_type') == 'logo'): ?>
@@ -33,6 +33,25 @@
             </a>
             <?php endif; ?>
         </div>
+
+
+        <?php if ($main_menu): ?>
+        <div class="main-menu">
+          <nav id ="main-menu" class="navigation clearfix" role="navigation">
+            <?php print theme('links__system_main_menu', array(
+              'links' => $main_menu,
+              'attributes' => array(
+                'class' => array('menu'),
+              ),
+              'heading' => array(
+                'text' => t('Main menu'),
+                'level' => 'h2',
+                'class' => array('element-invisible'),
+              ),
+            )); ?>
+          </nav> <!-- navigation -->
+        </div>  
+        <?php endif; ?>
 
 
 
