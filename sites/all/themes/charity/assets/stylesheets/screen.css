@@ -113,116 +113,122 @@ a:hover {
     grid-template-columns: 1fr repeat(2, minmax(auto, 60em)) 1fr;
   }
 
-  /* line 14, ../sass/layout/_layout.scss */
+  /* line 13, ../sass/layout/_layout.scss */
   .l-header__inner {
     grid-column: 2/4;
     padding: 0.625em 0.625em 0.625em 5em;
   }
 
+  /* line 17, ../sass/layout/_layout.scss */
+  .l-header {
+    background-color: #FFF;
+    height: auto;
+  }
+
   /* Center items by placing them in the two center columns: */
-  /* line 21, ../sass/layout/_layout.scss */
+  /* line 24, ../sass/layout/_layout.scss */
   .col-2__title {
     grid-column: 1/4;
   }
 
-  /* line 25, ../sass/layout/_layout.scss */
+  /* line 28, ../sass/layout/_layout.scss */
   .col-1__title {
     grid-column: 1/4;
   }
 
-  /* line 30, ../sass/layout/_layout.scss */
+  /* line 33, ../sass/layout/_layout.scss */
   .col-2 ul {
     grid-column: 2/4;
   }
 
-  /* line 33, ../sass/layout/_layout.scss */
+  /* line 36, ../sass/layout/_layout.scss */
   .col-1 ul {
     grid-column: 1/4;
   }
 }
-/* line 44, ../sass/layout/_layout.scss */
+/* line 47, ../sass/layout/_layout.scss */
 .splash-text {
   columns: 2;
   column-gap: 2em;
 }
 
-/* line 49, ../sass/layout/_layout.scss */
+/* line 52, ../sass/layout/_layout.scss */
 .col-1__text p {
   padding-top: 0;
 }
 
-/* line 55, ../sass/layout/_layout.scss */
+/* line 58, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 2em 1em 1em;
 }
 
-/* line 59, ../sass/layout/_layout.scss */
+/* line 62, ../sass/layout/_layout.scss */
 .col-1 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 64, ../sass/layout/_layout.scss */
+/* line 67, ../sass/layout/_layout.scss */
 .col-1 li {
   margin-bottom: 1em;
   background: white;
   list-style-type: none;
 }
 
-/* line 70, ../sass/layout/_layout.scss */
+/* line 73, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 1.5em;
 }
 
-/* line 75, ../sass/layout/_layout.scss */
+/* line 78, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 2em 1em 1em;
 }
 
-/* line 80, ../sass/layout/_layout.scss */
+/* line 83, ../sass/layout/_layout.scss */
 .col-1 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 85, ../sass/layout/_layout.scss */
+/* line 88, ../sass/layout/_layout.scss */
 .col-1 li {
   margin-bottom: 1em;
   background: white;
   list-style-type: none;
 }
 
-/* line 91, ../sass/layout/_layout.scss */
+/* line 94, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 1.5em;
 }
 
 @supports (display: flex) {
-  /* line 101, ../sass/layout/_layout.scss */
+  /* line 104, ../sass/layout/_layout.scss */
   .l-header__inner {
     display: flex;
     justify-content: space-between;
     padding: 0.625em 5em 0.625em 5em;
   }
 
-  /* line 107, ../sass/layout/_layout.scss */
+  /* line 110, ../sass/layout/_layout.scss */
   .col-2 ul {
     display: flex;
     justify-content: space-around;
   }
 
-  /* line 113, ../sass/layout/_layout.scss */
+  /* line 116, ../sass/layout/_layout.scss */
   .col-2 li {
     width: 33%;
   }
 
-  /* line 117, ../sass/layout/_layout.scss */
+  /* line 120, ../sass/layout/_layout.scss */
   .col-1 ul {
     display: flex;
     justify-content: space-around;
   }
 
-  /* line 122, ../sass/layout/_layout.scss */
+  /* line 125, ../sass/layout/_layout.scss */
   .col-1 li {
     width: 24%;
   }
@@ -304,4 +310,28 @@ a:hover {
 .navigation ul.menu li:last-child a:hover {
   background-color: #61c0bd;
   color: #FFF;
+}
+
+/*--------------------------------------------------------------
+## main region
+--------------------------------------------------------------*/
+@supports (display: grid) {
+  /* line 8, ../sass/layout/_main.scss */
+  .l-outer {
+    height: auto;
+  }
+
+  /* line 11, ../sass/layout/_main.scss */
+  .l-outer__inner {
+    grid-column: 2/4;
+    padding: 0.625em 0.625em 0.625em 5em;
+  }
+}
+@supports (display: flex) {
+  /* line 24, ../sass/layout/_main.scss */
+  .l-outer__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625em 5em 0.625em 5em;
+  }
 }

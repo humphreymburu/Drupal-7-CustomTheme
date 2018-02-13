@@ -10,10 +10,13 @@
 					display: grid;
 					grid-template-columns: 1fr repeat(2, minmax(auto, 60em)) 1fr;
 				}
-
 				.l-header__inner {
 					grid-column: 2/4;
 					padding: 0.625em 0.625em 0.625em 5em;
+				}
+				.l-header {
+					background-color: #FFF;
+					height: auto;
 				}
 		
 				/* Center items by placing them in the two center columns: */

@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------
+## main region
+--------------------------------------------------------------*/
+
+// Core region e.g Breadcrumbs,titles,feature and tabs
+
+@supports (display: grid){
+    .l-outer {
+        height: auto;
+    }
+    .l-outer__inner{
+        grid-column: 2/4;
+        padding: 0.625em 0.625em 0.625em 5em;
+    }
+    
+
+
+
+
+}
+
+@supports (display: flex) {
+
+    .l-outer__inner{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.625em 5em 0.625em 5em;
+    }
+    
+}

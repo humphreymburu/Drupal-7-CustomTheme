@@ -18,8 +18,8 @@
  * @ingroup themeable
  */
 ?>
-  <header class="l-header">
-      <div class="l-header__inner grid">
+  <header id="heading" class="l-header grid">
+      <div class="l-header__inner">
       
       <div class="branding">
              <?php if (theme_get_setting('branding_type') == 'logo'): ?>
@@ -59,8 +59,39 @@
       </div>
   </header><!-- .header -->
   
+  <section id="core-outer-wrapper" class="l-outer grid">
+  
+  <div class="l-outer__inner">
+    
+    <div id="highlighted" class="highlighted">
+      <?php print $messages; ?>
+      
+      <?php if ($breadcrumb): ?>
+      <div id="breadcrumb"><?php print $breadcrumb; ?>
+      </div>
+      <?php endif; ?>
+      
+      <a id="main-content"></a>
+      <?php print render($title_prefix); ?>
+      <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+      <?php print render($title_suffix); ?>
+      <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+      <?php print render($page['help']); ?>
+      <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+    
+      <?php if ($page['highlighted']): ?>
+        <?php print render($page['highlighted']); ?>
+      <?php endif; ?>
+    </div>
+    </section>
+
   <main class="l-main">
     
+
+
+
+
+
   <section class="region-content region-content__color grid">
       <div class="col-1">
           <h2>New Events </h2>
