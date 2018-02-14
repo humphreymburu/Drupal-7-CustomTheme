@@ -18,9 +18,9 @@
  * @ingroup themeable
  */
 ?>
-  <header id="heading" class="l-header grid">
-      <div class="l-header__inner">
-      
+  <div class="wrapper">
+  <header class="l-header">
+    <div class="l-header__inner">
       <div class="branding">
              <?php if (theme_get_setting('branding_type') == 'logo'): ?>
                 <div class="branding__logo">
@@ -32,7 +32,7 @@
               <h2 class="branding__slogan"><?php print variable_get('site_slogan'); ?></h2>
             </a>
             <?php endif; ?>
-        </div>
+      </div>
 
 
         <?php if ($main_menu): ?>
@@ -52,18 +52,14 @@
           </nav> <!-- navigation -->
         </div>  
         <?php endif; ?>
-
-
-
-
-      </div>
+    </div>
   </header><!-- .header -->
   
-  <section id="core-outer-wrapper" class="l-outer grid">
+  <section id="core-outer-wrapper" class="l-outer">
   
-  <div class="l-outer__inner">
+    <div class="l-outer__inner">
     
-    <div id="highlighted" class="highlighted">
+     <div id="highlighted" class="highlighted">
       <?php print $messages; ?>
       
       <?php if ($breadcrumb): ?>
@@ -83,113 +79,34 @@
         <?php print render($page['highlighted']); ?>
       <?php endif; ?>
     </div>
-    </section>
+  </section>
 
-  <main class="l-main">
+    <?php
+    // need some good cleanup on these default Drupal elements
+    ?>
+
     
+    <div class="region-first">
+      <p>Left</p>
+    </div>
+
+    <div class="main-content">
+      <p>Main cont</p>
+    </div>
+
+    <div class="region-second">
+      <p>Right</p>
+    </div>
+   
 
 
-
-
-
-  <section class="region-content region-content__color grid">
-      <div class="col-1">
-          <h2>New Events </h2>
-              <p>cancer research uk</p>
-        </div>
-    </section><!-- .events -->
-  
-
-    <section class="col-2 grid">
-
-    <div class="col-2__title"><h2 class="content-title">Mission</h2></div>
+   
     
-        <ul>
-  
-          <li>
-          <p>test</p>
-          </li>
-          <li>
-          <p>test2</p>
-          </li>
-          <li>
-           <p>test3</p>
-          </li>
-        </ul>
-      </section>
-
-
-      <section class="col-2 grid">
-      <div class="col-2__title"><h2 class="content-title">Mission</h2></div>
-    
-        <ul>
-  
-          <li>
-          <p>test</p>
-          </li>
-          <li>
-          <p>test2</p>
-          </li>
-          <li>
-           <p>test3</p>
-          </li>
-        </ul>
-      </section>
-        </section>
-
-
-
-
-
-
-
-
-
-        <section class="col-1 grid">
-            <ul>
-                <li>
-                   <p>test3</p>
-                  </li>
-      
-              <li>
-               <p>test3</p>
-              </li>
-              <li>
-                <p>test3</p>
-              </li>
-              <li>
-               <p>test3</p>
-              </li>
-            </ul>
-          </section>
-
-
-          <section class="col-1 grid">
-          <ul>
-                <li>
-                   <p>test3</p>
-                  </li>
-      
-              <li>
-               <p>test3</p>
-              </li>
-              <li>
-                <p>test3</p>
-              </li>
-              <li>
-               <p>test3</p>
-              </li>
-            </ul>
-            </section>
   
 
-  </main>
+
+
+
   
-  <footer class="colophon grid">
 
-    <div class="more-content">
-        <h2 class="content-title">Footer</h2>
-        <p>Test<p>
-      </div><!-- .more-content -->
-
-  </footer>
+          </div>

@@ -1,23 +1,42 @@
+.wrapper {
+	max-width: 70em;
+	margin: 0 auto;
+  background-color: red;
+}
+
+.l-header__inner { 
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
 
 
+
+
+.l-header {
+	height: 80px;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
 
 
    /* Layout with CSS Grid */
 	@supports (display: grid) {
 		
-				/* Four-column layout. Two center columns have a total max width of 70em: */
-				.grid {
-					display: grid;
-					grid-template-columns: 1fr repeat(2, minmax(auto, 60em)) 1fr;
-				}
-				.l-header__inner {
-					grid-column: 2/4;
-					padding: 0.625em 0.625em 0.625em 5em;
-				}
-				.l-header {
-					background-color: #FFF;
-					height: auto;
-				}
+		.wrapper {
+			display: -ms-grid;
+			display: grid;
+			grid-gap: 0.625em;	
+			-ms-grid-columns: unquote("repeat(12, [col] 1fr )");	
+					grid-template-columns: unquote("repeat(12, [col] 1fr )");
+		}
+		.wrapper > * {
+			grid-column: col / span 12;
+		}
+		
+
+
+
 		
 				/* Center items by placing them in the two center columns: */
 				
@@ -101,11 +120,7 @@
 
 @supports (display: flex) {
 	
-.l-header__inner{
-	display: flex;
-	justify-content: space-between;
-	padding: 0.625em 5em 0.625em 5em;
-}
+
 
 .col-2 ul {
 	display: flex;
@@ -127,3 +142,7 @@
 }
 
 }
+
+
+
+	

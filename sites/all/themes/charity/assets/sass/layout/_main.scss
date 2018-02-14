@@ -4,27 +4,31 @@
 
 // Core region e.g Breadcrumbs,titles,feature and tabs
 
-@supports (display: grid){
-    .l-outer {
-        height: auto;
-    }
-    .l-outer__inner{
-        grid-column: 2/4;
-        padding: 0.625em 0.625em 0.625em 5em;
-    }
-    
-
-
-
-
+.l-outer {
+    height: 3.75em;
+    grid-row: 2/4;
+}
+.l-outer__inner{
+    display: flex;
+    justify-content: space-between;
 }
 
-@supports (display: flex) {
+// Main Content , sidebar-first , sidebar-second
 
-    .l-outer__inner{
-        display: flex;
-        justify-content: space-between;
-        padding: 0.625em 5em 0.625em 5em;
-    }
-    
+
+
+.region-first {
+    grid-column: col / span 3;
+    grid-row: 3/5;
+  }
+  
+.main-content {
+    grid-column: col 4 / span 8; 
+    grid-row: 3/5;
 }
+  
+.region-second {
+    grid-column: col 10 / span 3;
+    grid-row: 3/5;
+}
+
