@@ -84,29 +84,30 @@
     <?php
     // need some good cleanup on these default Drupal elements
     ?>
-
-    
-    <div class="region-first">
-      <p>Left</p>
-    </div>
-
-    <div class="main-content">
-      <p>Main cont</p>
-    </div>
-
-    <div class="region-second">
-      <p>Right</p>
-    </div>
-   
-
-
-   
-    
+ 
+ <main id="content" class="main-content" role="main">
+        <?php print render($page['content']); ?>
+        <?php print $feed_icons; ?>
+      </main> <!-- /.section, /#content -->
   
-
-
-
-
+      <?php if ($page['sidebar_first']): ?>
+        <div id="sidebar-first" class="region-first">
+          <aside class="section">
+            <?php print render($page['sidebar_first']); ?>
+          </aside>
+        </div><!-- /.section, /#sidebar-first -->
+      <?php endif; ?>
   
+      <?php if ($page['sidebar_second']): ?>
+        <div id="sidebar-second" class="region-second">
+          <aside class="section">
+            <?php print render($page['sidebar_second']); ?>
+          </aside>
+        </div><!-- /.section, /#sidebar-second -->
+      <?php endif; ?>
+  
+    
+
+
 
           </div>
