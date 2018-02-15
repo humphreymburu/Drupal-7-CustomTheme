@@ -126,7 +126,13 @@
   
 
   
-
+    <?php if ($page['footer']): ?>
+    <footer id="footer-outer-wrapper" class="l-footer">
+        <div id="footer" class="l-footer__inner">
+          <?php print render($page['footer']); ?>
+      </div> <!-- /#footer -->
+    </footer> <!-- /#footer-outer-wrapper -->
+  <?php endif; ?>
 
 
           </div>
