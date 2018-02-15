@@ -22,30 +22,29 @@
   
 .l-main-content {
     grid-column: col 4 / span 8; 
-    grid-row: 3/5;
 }
 .l-main-content__full {
     grid-column: col / span 12; 
-    grid-row: 3/5;
+    //grid-row: 3/5;
 }  
 .l-sidebar-second {
     grid-column: col 10 / span 3;
-    grid-row: 3/5;
+    //grid-row: 3/5;
 }
 .l-main-content__left-content {
     grid-column: col / span 10; 
-    grid-row: 3/5;
+    //grid-row: 3/5;
 }
 .l-sidebar-second__right {
     grid-column: col 10 / span 3;
-    grid-row: 3/5;
+    //grid-row: 3/5;
 }
 .l-main-content__right-content {
     grid-column: col 4 / span 10;
-    grid-row: 3/5;
+    //grid-row: 3/5;
 }
 .l-sidebar-first__left {
     grid-column: col / span 3;
-    grid-row: 3/5;
+    //grid-row: 3/5;
 }
 
