@@ -1,15 +1,39 @@
 /*--------------------------------------------------------------
 ## Header region
 --------------------------------------------------------------*/
-
+header{
+    max-width: 79.0625;
+    margin: 0 auto;
+    width: 100%
+}
 .l-header__inner { 
 	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80px;
 }
 
-.l-header {
-	height: 80px;
-	padding-top: 0.5em;
+header {
+    padding-top: 0.5em;
 	padding-bottom: 0.5em;
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
 }
+
+@supports (display: grid) {
+    
+    header {
+        display: -ms-grid;
+        display: grid;
+        grid-gap: 0.125em;	
+        -ms-grid-columns: unquote("repeat(12, [col] 1fr )");	
+                grid-template-columns: unquote("repeat(12, [col] 1fr )");
+    }
+    header > * {
+        grid-column: col 2/ span 10;
+    }
+
+}    

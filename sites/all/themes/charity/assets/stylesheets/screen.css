@@ -491,7 +491,7 @@ a:hover {
 }
 
 /* IE7 */
-/* line 1, ../sass/layout/_layout.scss */
+/* line 3, ../sass/layout/_layout.scss */
 .wrapper {
   max-width: 70em;
   margin: 0 auto;
@@ -500,7 +500,7 @@ a:hover {
 
 /* Layout with CSS Grid */
 @supports (display: grid) {
-  /* line 10, ../sass/layout/_layout.scss */
+  /* line 12, ../sass/layout/_layout.scss */
   .wrapper {
     display: -ms-grid;
     display: grid;
@@ -509,108 +509,108 @@ a:hover {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 17, ../sass/layout/_layout.scss */
+  /* line 19, ../sass/layout/_layout.scss */
   .wrapper > * {
     grid-column: col / span 12;
   }
 
   /* Center items by placing them in the two center columns: */
-  /* line 27, ../sass/layout/_layout.scss */
+  /* line 29, ../sass/layout/_layout.scss */
   .col-2__title {
     grid-column: 1/4;
   }
 
-  /* line 31, ../sass/layout/_layout.scss */
+  /* line 33, ../sass/layout/_layout.scss */
   .col-1__title {
     grid-column: 1/4;
   }
 
-  /* line 36, ../sass/layout/_layout.scss */
+  /* line 38, ../sass/layout/_layout.scss */
   .col-2 ul {
     grid-column: 2/4;
   }
 
-  /* line 39, ../sass/layout/_layout.scss */
+  /* line 41, ../sass/layout/_layout.scss */
   .col-1 ul {
     grid-column: 1/4;
   }
 }
-/* line 50, ../sass/layout/_layout.scss */
+/* line 52, ../sass/layout/_layout.scss */
 .splash-text {
   columns: 2;
   column-gap: 2em;
 }
 
-/* line 55, ../sass/layout/_layout.scss */
+/* line 57, ../sass/layout/_layout.scss */
 .col-1__text p {
   padding-top: 0;
 }
 
-/* line 61, ../sass/layout/_layout.scss */
+/* line 63, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 2em 1em 1em;
 }
 
-/* line 65, ../sass/layout/_layout.scss */
+/* line 67, ../sass/layout/_layout.scss */
 .col-1 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 70, ../sass/layout/_layout.scss */
+/* line 72, ../sass/layout/_layout.scss */
 .col-1 li {
   margin-bottom: 1em;
   background: white;
   list-style-type: none;
 }
 
-/* line 76, ../sass/layout/_layout.scss */
+/* line 78, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 1.5em;
 }
 
-/* line 81, ../sass/layout/_layout.scss */
+/* line 83, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 2em 1em 1em;
 }
 
-/* line 86, ../sass/layout/_layout.scss */
+/* line 88, ../sass/layout/_layout.scss */
 .col-1 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 91, ../sass/layout/_layout.scss */
+/* line 93, ../sass/layout/_layout.scss */
 .col-1 li {
   margin-bottom: 1em;
   background: white;
   list-style-type: none;
 }
 
-/* line 97, ../sass/layout/_layout.scss */
+/* line 99, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 1.5em;
 }
 
 @supports (display: flex) {
-  /* line 109, ../sass/layout/_layout.scss */
+  /* line 111, ../sass/layout/_layout.scss */
   .col-2 ul {
     display: flex;
     justify-content: space-around;
   }
 
-  /* line 115, ../sass/layout/_layout.scss */
+  /* line 117, ../sass/layout/_layout.scss */
   .col-2 li {
     width: 33%;
   }
 
-  /* line 119, ../sass/layout/_layout.scss */
+  /* line 121, ../sass/layout/_layout.scss */
   .col-1 ul {
     display: flex;
     justify-content: space-around;
   }
 
-  /* line 124, ../sass/layout/_layout.scss */
+  /* line 126, ../sass/layout/_layout.scss */
   .col-1 li {
     width: 24%;
   }
@@ -642,11 +642,9 @@ a:hover {
   text-shadow: none;
   color: transparent;
   color: transparent;
-  line-height: 60px;
-  margin: 0.3125em;
 }
 
-/* line 27, ../sass/components/_branding.scss */
+/* line 25, ../sass/components/_branding.scss */
 .branding__title, .branding__slogan {
   margin: 0;
   line-height: 1em;
@@ -698,54 +696,75 @@ a:hover {
 ## main region
 --------------------------------------------------------------*/
 /* line 7, ../sass/layout/_main.scss */
-.l-outer {
-  height: 3.75em;
-  grid-row: 2/4;
+main {
+  max-width: 79.0625;
+  margin: 0 auto;
+  width: 100%;
 }
 
-/* line 11, ../sass/layout/_main.scss */
+@supports (display: grid) {
+  /* line 15, ../sass/layout/_main.scss */
+  main {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 0.125em;
+    -ms-grid-columns: repeat(12, [col] 1fr );
+    grid-template-columns: repeat(12, [col] 1fr );
+  }
+
+  /* line 22, ../sass/layout/_main.scss */
+  main > * {
+    grid-column: col 2/ span 10;
+  }
+}
+/* line 28, ../sass/layout/_main.scss */
+.l-outer {
+  height: 3.75em;
+}
+
+/* line 31, ../sass/layout/_main.scss */
 .l-outer__inner {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 18, ../sass/layout/_main.scss */
+/* line 38, ../sass/layout/_main.scss */
 .l-sidebar-first {
   grid-column: col / span 3;
   grid-row: 3/5;
 }
 
-/* line 23, ../sass/layout/_main.scss */
+/* line 43, ../sass/layout/_main.scss */
 .l-main-content {
   grid-column: col 4 / span 8;
 }
 
-/* line 26, ../sass/layout/_main.scss */
+/* line 46, ../sass/layout/_main.scss */
 .l-main-content__full {
   grid-column: col / span 12;
 }
 
-/* line 30, ../sass/layout/_main.scss */
+/* line 50, ../sass/layout/_main.scss */
 .l-sidebar-second {
   grid-column: col 10 / span 3;
 }
 
-/* line 34, ../sass/layout/_main.scss */
+/* line 54, ../sass/layout/_main.scss */
 .l-main-content__left-content {
   grid-column: col / span 10;
 }
 
-/* line 38, ../sass/layout/_main.scss */
+/* line 58, ../sass/layout/_main.scss */
 .l-sidebar-second__right {
   grid-column: col 10 / span 3;
 }
 
-/* line 42, ../sass/layout/_main.scss */
+/* line 62, ../sass/layout/_main.scss */
 .l-main-content__right-content {
   grid-column: col 4 / span 10;
 }
 
-/* line 46, ../sass/layout/_main.scss */
+/* line 66, ../sass/layout/_main.scss */
 .l-sidebar-first__left {
   grid-column: col / span 3;
 }
@@ -753,24 +772,78 @@ a:hover {
 /*--------------------------------------------------------------
 ## Header region
 --------------------------------------------------------------*/
-/* line 5, ../sass/layout/_header.scss */
+/* line 4, ../sass/layout/_header.scss */
+header {
+  max-width: 79.0625;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* line 9, ../sass/layout/_header.scss */
 .l-header__inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  height: 80px;
 }
 
-/* line 11, ../sass/layout/_header.scss */
-.l-header {
-  height: 80px;
+/* line 17, ../sass/layout/_header.scss */
+header {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
 }
 
+@supports (display: grid) {
+  /* line 28, ../sass/layout/_header.scss */
+  header {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 0.125em;
+    -ms-grid-columns: repeat(12, [col] 1fr );
+    grid-template-columns: repeat(12, [col] 1fr );
+  }
+
+  /* line 35, ../sass/layout/_header.scss */
+  header > * {
+    grid-column: col 2/ span 10;
+  }
+}
 /*--------------------------------------------------------------
 ## Footer Region
 --------------------------------------------------------------*/
 /* line 5, ../sass/layout/_footer.scss */
-l-footer {
-  grid-column: col / span 12;
+footer {
+  max-width: 79.0625;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* line 11, ../sass/layout/_footer.scss */
+footer {
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@supports (display: grid) {
+  /* line 21, ../sass/layout/_footer.scss */
+  footer {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 0.125em;
+    -ms-grid-columns: repeat(12, [col] 1fr );
+    grid-template-columns: repeat(12, [col] 1fr );
+  }
+
+  /* line 28, ../sass/layout/_footer.scss */
+  footer > * {
+    grid-column: col 2/ span 10;
+  }
 }

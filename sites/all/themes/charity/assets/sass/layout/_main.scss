@@ -4,9 +4,29 @@
 
 // Core region e.g Breadcrumbs,titles,feature and tabs
 
+main {
+    max-width: 79.0625;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@supports (display: grid) {
+    
+    main {
+        display: -ms-grid;
+        display: grid;
+        grid-gap: 0.125em;	
+        -ms-grid-columns: unquote("repeat(12, [col] 1fr )");	
+                grid-template-columns: unquote("repeat(12, [col] 1fr )");
+    }
+    main > * {
+        grid-column: col 2/ span 10;
+    }
+
+} 
+
 .l-outer {
     height: 3.75em;
-    grid-row: 2/4;
 }
 .l-outer__inner{
     display: flex;

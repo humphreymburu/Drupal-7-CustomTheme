@@ -2,6 +2,32 @@
 ## Footer Region
 --------------------------------------------------------------*/
 
-l-footer {
-    grid-column: col / span 12;
+footer {
+    max-width: 79.0625;
+    margin: 0 auto;
+    width: 100%;
 }
+
+footer {
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@supports (display: grid) {
+    
+    footer {
+        display: -ms-grid;
+        display: grid;
+        grid-gap: 0.125em;	
+        -ms-grid-columns: unquote("repeat(12, [col] 1fr )");	
+                grid-template-columns: unquote("repeat(12, [col] 1fr )");
+    }
+    footer > * {
+        grid-column: col 2/ span 10;
+    }
+
+} 
+
