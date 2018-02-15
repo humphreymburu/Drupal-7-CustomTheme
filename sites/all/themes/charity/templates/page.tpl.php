@@ -85,28 +85,47 @@
     // need some good cleanup on these default Drupal elements
     ?>
  
- <main id="content" class="main-content" role="main">
+ <?php
+      // Render the sidebars to see if there's anything in them.
+      $sidebar_first  = render($page['sidebar_first']);
+      $sidebar_second = render($page['sidebar_second']);
+      // Decide on layout classes by checking if sidebars have content.
+      $content_class = 'l-main-content__full';
+      $sidebar_first_class = $sidebar_second_class = '';
+      if ($sidebar_first && $sidebar_second):
+        $content_class = 'l-main-content';
+        $sidebar_first_class = 'l-sidebar-first';
+        $sidebar_second_class = 'l-sidebar-second';
+      elseif ($sidebar_second):
+        $content_class = 'l-main-content__left-content';
+        $sidebar_second_class = 'l-sidebar-second__right';
+      elseif ($sidebar_first):
+        $content_class = 'l-main-content__right-content';
+        $sidebar_first_class = 'l-sidebar-first__left';
+      endif;
+    ?>
+
+
+ <main id="content" class="<?php print $content_class; ?>" role="main">
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
       </main> <!-- /.section, /#content -->
   
-      <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="region-first">
-          <aside class="section">
-            <?php print render($page['sidebar_first']); ?>
-          </aside>
-        </div><!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
+
+    <?php if ($page['sidebar_first']): ?>
+      <aside class="<?php print $sidebar_first_class; ?>" role="complementary">
+        <?php print $sidebar_first; ?>
+      </aside>
+    <?php endif; ?>
+
+    <?php if ($sidebar_second): ?>
+      <aside class="<?php print $sidebar_second_class; ?>" role="complementary">
+        <?php print $sidebar_second; ?>
+      </aside>
+    <?php endif; ?>
   
-      <?php if ($page['sidebar_second']): ?>
-        <div id="sidebar-second" class="region-second">
-          <aside class="section">
-            <?php print render($page['sidebar_second']); ?>
-          </aside>
-        </div><!-- /.section, /#sidebar-second -->
-      <?php endif; ?>
+
   
-    
 
 
 

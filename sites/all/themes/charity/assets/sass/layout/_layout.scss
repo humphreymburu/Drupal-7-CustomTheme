@@ -10,9 +10,6 @@
 	flex-wrap: wrap;
 }
 
-
-
-
 .l-header {
 	height: 80px;
 	padding-top: 0.5em;
@@ -26,7 +23,7 @@
 		.wrapper {
 			display: -ms-grid;
 			display: grid;
-			grid-gap: 0.625em;	
+			grid-gap: 0.125em;	
 			-ms-grid-columns: unquote("repeat(12, [col] 1fr )");	
 					grid-template-columns: unquote("repeat(12, [col] 1fr )");
 		}

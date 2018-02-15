@@ -505,7 +505,7 @@ a:hover {
   flex-wrap: wrap;
 }
 
-/* line 16, ../sass/layout/_layout.scss */
+/* line 13, ../sass/layout/_layout.scss */
 .l-header {
   height: 80px;
   padding-top: 0.5em;
@@ -514,117 +514,117 @@ a:hover {
 
 /* Layout with CSS Grid */
 @supports (display: grid) {
-  /* line 26, ../sass/layout/_layout.scss */
+  /* line 23, ../sass/layout/_layout.scss */
   .wrapper {
     display: -ms-grid;
     display: grid;
-    grid-gap: 0.625em;
+    grid-gap: 0.125em;
     -ms-grid-columns: repeat(12, [col] 1fr );
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 33, ../sass/layout/_layout.scss */
+  /* line 30, ../sass/layout/_layout.scss */
   .wrapper > * {
     grid-column: col / span 12;
   }
 
   /* Center items by placing them in the two center columns: */
-  /* line 43, ../sass/layout/_layout.scss */
+  /* line 40, ../sass/layout/_layout.scss */
   .col-2__title {
     grid-column: 1/4;
   }
 
-  /* line 47, ../sass/layout/_layout.scss */
+  /* line 44, ../sass/layout/_layout.scss */
   .col-1__title {
     grid-column: 1/4;
   }
 
-  /* line 52, ../sass/layout/_layout.scss */
+  /* line 49, ../sass/layout/_layout.scss */
   .col-2 ul {
     grid-column: 2/4;
   }
 
-  /* line 55, ../sass/layout/_layout.scss */
+  /* line 52, ../sass/layout/_layout.scss */
   .col-1 ul {
     grid-column: 1/4;
   }
 }
-/* line 66, ../sass/layout/_layout.scss */
+/* line 63, ../sass/layout/_layout.scss */
 .splash-text {
   columns: 2;
   column-gap: 2em;
 }
 
-/* line 71, ../sass/layout/_layout.scss */
+/* line 68, ../sass/layout/_layout.scss */
 .col-1__text p {
   padding-top: 0;
 }
 
-/* line 77, ../sass/layout/_layout.scss */
+/* line 74, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 2em 1em 1em;
 }
 
-/* line 81, ../sass/layout/_layout.scss */
+/* line 78, ../sass/layout/_layout.scss */
 .col-1 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 86, ../sass/layout/_layout.scss */
+/* line 83, ../sass/layout/_layout.scss */
 .col-1 li {
   margin-bottom: 1em;
   background: white;
   list-style-type: none;
 }
 
-/* line 92, ../sass/layout/_layout.scss */
+/* line 89, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 1.5em;
 }
 
-/* line 97, ../sass/layout/_layout.scss */
+/* line 94, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 2em 1em 1em;
 }
 
-/* line 102, ../sass/layout/_layout.scss */
+/* line 99, ../sass/layout/_layout.scss */
 .col-1 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 107, ../sass/layout/_layout.scss */
+/* line 104, ../sass/layout/_layout.scss */
 .col-1 li {
   margin-bottom: 1em;
   background: white;
   list-style-type: none;
 }
 
-/* line 113, ../sass/layout/_layout.scss */
+/* line 110, ../sass/layout/_layout.scss */
 .col-1 {
   padding: 1.5em;
 }
 
 @supports (display: flex) {
-  /* line 125, ../sass/layout/_layout.scss */
+  /* line 122, ../sass/layout/_layout.scss */
   .col-2 ul {
     display: flex;
     justify-content: space-around;
   }
 
-  /* line 131, ../sass/layout/_layout.scss */
+  /* line 128, ../sass/layout/_layout.scss */
   .col-2 li {
     width: 33%;
   }
 
-  /* line 135, ../sass/layout/_layout.scss */
+  /* line 132, ../sass/layout/_layout.scss */
   .col-1 ul {
     display: flex;
     justify-content: space-around;
   }
 
-  /* line 140, ../sass/layout/_layout.scss */
+  /* line 137, ../sass/layout/_layout.scss */
   .col-1 li {
     width: 24%;
   }
@@ -723,20 +723,50 @@ a:hover {
   justify-content: space-between;
 }
 
-/* line 20, ../sass/layout/_main.scss */
-.region-first {
+/* line 18, ../sass/layout/_main.scss */
+.l-sidebar-first {
   grid-column: col / span 3;
   grid-row: 3/5;
 }
 
-/* line 25, ../sass/layout/_main.scss */
-.main-content {
+/* line 23, ../sass/layout/_main.scss */
+.l-main-content {
   grid-column: col 4 / span 8;
   grid-row: 3/5;
 }
 
-/* line 30, ../sass/layout/_main.scss */
-.region-second {
+/* line 27, ../sass/layout/_main.scss */
+.l-main-content__full {
+  grid-column: col / span 12;
+  grid-row: 3/5;
+}
+
+/* line 31, ../sass/layout/_main.scss */
+.l-sidebar-second {
   grid-column: col 10 / span 3;
+  grid-row: 3/5;
+}
+
+/* line 35, ../sass/layout/_main.scss */
+.l-main-content__left-content {
+  grid-column: col / span 10;
+  grid-row: 3/5;
+}
+
+/* line 39, ../sass/layout/_main.scss */
+.l-sidebar-second__right {
+  grid-column: col 10 / span 3;
+  grid-row: 3/5;
+}
+
+/* line 43, ../sass/layout/_main.scss */
+.l-main-content__right-content {
+  grid-column: col 4 / span 10;
+  grid-row: 3/5;
+}
+
+/* line 47, ../sass/layout/_main.scss */
+.l-sidebar-first__left {
+  grid-column: col / span 3;
   grid-row: 3/5;
 }
