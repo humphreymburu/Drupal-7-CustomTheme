@@ -652,7 +652,7 @@ main {
 
 /* line 64, ../sass/layout/_main.scss */
 .l-main-content__full {
-  grid-column: col 0 / span 12;
+  grid-column: col / span 12;
   max-width: 100%;
 }
 
@@ -679,6 +679,81 @@ main {
 /* line 83, ../sass/layout/_main.scss */
 .l-sidebar-first__left {
   grid-column: col / span 3;
+}
+
+/* line 90, ../sass/layout/_main.scss */
+.ribbon {
+  background-color: #f1f2f5;
+  background-size: cover;
+  padding-top: 2.525em;
+  padding-bottom: 2.525em;
+}
+
+/* line 97, ../sass/layout/_main.scss */
+.ribbon {
+  background-color: #f1f2f5;
+  background-size: cover;
+  padding-top: 2.325em;
+  padding-bottom: 2.325em;
+}
+/* line 105, ../sass/layout/_main.scss */
+.ribbon .date-display-single {
+  font-weight: 700;
+}
+/* line 110, ../sass/layout/_main.scss */
+.ribbon p {
+  line-height: 1.625em;
+}
+/* line 114, ../sass/layout/_main.scss */
+.ribbon .fieldable-panels-pane {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* line 121, ../sass/layout/_main.scss */
+.ribbon .fieldable-panels-pane {
+  flex: 0 0 50%;
+}
+
+@supports (display: grid) {
+  /* line 130, ../sass/layout/_main.scss */
+  .ribbon {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 0.125em;
+    -ms-grid-columns: repeat(12, [col] 1fr );
+    grid-template-columns: repeat(12, [col] 1fr );
+  }
+
+  /* line 137, ../sass/layout/_main.scss */
+  .ribbon > * {
+    grid-column: col 2/ span 10;
+  }
+
+  /* line 141, ../sass/layout/_main.scss */
+  .field-name-field-register {
+    grid-column: col 11/ span 2;
+    grid-row: 1;
+  }
+  /* line 145, ../sass/layout/_main.scss */
+  .field-name-field-register a {
+    background-color: #61c0bd;
+    padding: 0.75em 1.5em;
+    margin: 0 0 0.75em 0;
+    transition: background-color 200ms ease;
+    user-select: none;
+    vertical-align: middle;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
+/* line 163, ../sass/layout/_main.scss */
+.field-name-field-event-date .field-label {
+  text-transform: uppercase;
+  color: #61c0bd;
 }
 
 /*--------------------------------------------------------------

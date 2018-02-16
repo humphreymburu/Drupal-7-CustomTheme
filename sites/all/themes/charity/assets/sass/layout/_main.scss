@@ -62,7 +62,7 @@ main {
     grid-column: col 4 / span 8; 
 }
 .l-main-content__full {
-    grid-column: col 0 / span 12; 
+    grid-column: col / span 12; 
     max-width: 100%;
 }  
 .l-sidebar-second {
@@ -85,6 +85,86 @@ main {
     //grid-row: 3/5;
 }
 
+// New Events Ribbon
+
+.ribbon {
+    background-color: #f1f2f5;
+    background-size: cover;
+    padding-top: 2.525em;
+    padding-bottom: 2.525em;
+} 
+
+.ribbon {
+
+    background-color: #f1f2f5;
+    background-size: cover;
+    padding-top: 2.325em;
+    padding-bottom: 2.325em;
+    
+    
+    .date-display-single {
+        font-weight: 700;
+    }
+
+
+    p {
+        line-height: 1.625em;
+    }
+
+    .fieldable-panels-pane{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .fieldable-panels-pane {
+        flex:0 0 50%;
+    }
+
+}
+
+
+@supports (display: grid) {
+    
+    .ribbon {
+        display: -ms-grid;
+        display: grid;
+        grid-gap: 0.125em;	
+        -ms-grid-columns: unquote("repeat(12, [col] 1fr )");	
+                grid-template-columns: unquote("repeat(12, [col] 1fr )");
+    }
+    .ribbon > * {
+        grid-column: col 2/ span 10;
+    }
+
+    .field-name-field-register {
+        grid-column: col 11/ span 2;
+        grid-row: 1;
+
+        a {
+            //border: solid 1px #61c0bd;
+            background-color: #61c0bd;
+            padding: 0.75em 1.5em;
+            margin: 0 0 0.75em 0;
+            transition: background-color 200ms ease;
+            user-select: none;
+            vertical-align: middle;
+            color: #fff;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+    }
+} 
+
+
+
+.field-name-field-event-date {
+   .field-label{
+       text-transform: uppercase;
+       color:#61c0bd;
+   }
+}
 
 
     
