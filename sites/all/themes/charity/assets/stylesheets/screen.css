@@ -632,55 +632,51 @@ main {
     grid-column: col 2/ span 10;
     grid-row: 5/12;
   }
-
-  /* line 43, ../sass/layout/_main.scss */
-  .slider {
-    max-width: 100%;
-  }
 }
-/* line 52, ../sass/layout/_main.scss */
+/* line 49, ../sass/layout/_main.scss */
 .l-outer__inner {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 59, ../sass/layout/_main.scss */
+/* line 56, ../sass/layout/_main.scss */
 .l-sidebar-first {
   grid-column: col / span 3;
   grid-row: 3/5;
 }
 
-/* line 64, ../sass/layout/_main.scss */
+/* line 61, ../sass/layout/_main.scss */
 .l-main-content {
   grid-column: col 4 / span 8;
 }
 
-/* line 67, ../sass/layout/_main.scss */
+/* line 64, ../sass/layout/_main.scss */
 .l-main-content__full {
-  grid-column: col 1 / span 12;
+  grid-column: col 0 / span 12;
+  max-width: 100%;
 }
 
-/* line 71, ../sass/layout/_main.scss */
+/* line 68, ../sass/layout/_main.scss */
 .l-sidebar-second {
   grid-column: col 10 / span 3;
 }
 
-/* line 75, ../sass/layout/_main.scss */
+/* line 71, ../sass/layout/_main.scss */
 .l-main-content__left-content {
   grid-column: col / span 10;
 }
 
-/* line 79, ../sass/layout/_main.scss */
+/* line 75, ../sass/layout/_main.scss */
 .l-sidebar-second__right {
   grid-column: col 10 / span 3;
 }
 
-/* line 83, ../sass/layout/_main.scss */
+/* line 79, ../sass/layout/_main.scss */
 .l-main-content__right-content {
   grid-column: col 4 / span 10;
 }
 
-/* line 87, ../sass/layout/_main.scss */
+/* line 83, ../sass/layout/_main.scss */
 .l-sidebar-first__left {
   grid-column: col / span 3;
 }
