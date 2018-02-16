@@ -2,9 +2,9 @@
 ## Header region
 --------------------------------------------------------------*/
 header{
-    max-width: 79.0625;
     margin: 0 auto;
-    width: 100%
+    width: 100%;
+    max-width: 79.0625em;
 }
 .l-header__inner { 
 	display: flex;
@@ -37,3 +37,35 @@ header {
     }
 
 }    
+
+// Hero
+
+    .slider{
+        
+        .field-items{
+          color: #fff;
+          text-align: center;
+          
+          p {
+            margin-bottom: 1.385em;
+            line-height: 1.625em;
+          }
+
+          h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.625em;
+          }
+
+        }
+
+    } 
+
+    .pane-style-full {
+        background-size: cover;
+        overflow: auto;
+        background-color: #4e4e4e;
+        width:100%;
+        height: 458px;
+    }
+
+

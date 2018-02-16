@@ -3,9 +3,9 @@
 --------------------------------------------------------------*/
 
 footer {
-    max-width: 79.0625;
     margin: 0 auto;
     width: 100%;
+    max-width: 79.0625em;
 }
 
 footer {
@@ -13,7 +13,6 @@ footer {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 @supports (display: grid) {

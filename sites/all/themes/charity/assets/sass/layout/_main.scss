@@ -5,9 +5,9 @@
 // Core region e.g Breadcrumbs,titles,feature and tabs
 
 main {
-    max-width: 79.0625;
     margin: 0 auto;
     width: 100%;
+    max-width: 79.0625em;
 }
 
 @supports (display: grid) {
@@ -20,13 +20,34 @@ main {
                 grid-template-columns: unquote("repeat(12, [col] 1fr )");
     }
     main > * {
-        grid-column: col 2/ span 10;
+        grid-column: col 1/ span 12;
     }
+
+
+} 
+
+@supports (display: grid) {
+    
+    .slider {
+        display: -ms-grid;
+        display: grid;
+        grid-gap: 0.125em;	
+        -ms-grid-columns: unquote("repeat(12, [col] 1fr )");	
+                grid-template-columns: unquote("repeat(12, [col] 1fr )");
+    }
+    .slider > * {
+        grid-column: col 2/ span 10;
+        grid-row: 5/12;
+    }
+
+    .slider {
+        max-width:100%;
+    }
+
 
 } 
 
 .l-outer {
-    height: 3.75em;
 }
 .l-outer__inner{
     display: flex;
@@ -44,7 +65,7 @@ main {
     grid-column: col 4 / span 8; 
 }
 .l-main-content__full {
-    grid-column: col / span 12; 
+    grid-column: col 1 / span 12; 
     //grid-row: 3/5;
 }  
 .l-sidebar-second {
@@ -68,3 +89,6 @@ main {
     //grid-row: 3/5;
 }
 
+
+
+    
