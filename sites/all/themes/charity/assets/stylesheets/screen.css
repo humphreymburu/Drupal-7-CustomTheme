@@ -458,7 +458,7 @@ img {
 /* line 64, ../sass/base/_base.scss */
 a {
   text-decoration: none;
-  color: #61c0bd;
+  color: #57c0d5;
   transition: opacity 0.25s ease-in-out;
   -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
@@ -466,7 +466,7 @@ a {
 /* line 68, ../sass/base/_base.scss */
 a:hover {
   text-decoration: none;
-  color: #61c0bd;
+  color: #57c0d5;
 }
 
 /* line 74, ../sass/base/_base.scss */
@@ -848,7 +848,7 @@ footer {
 /* line 15, ../sass/layout/_panels.scss */
 .panels-list {
   padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-bottom: 5em;
   align-items: center;
   position: relative;
   justify-content: space-around;
@@ -878,18 +878,18 @@ footer {
   padding: 1em 0 0 1em;
   text-align: center;
 }
-/* line 46, ../sass/layout/_panels.scss */
+/* line 47, ../sass/layout/_panels.scss */
 .panels-list img {
   width: 38%;
 }
-/* line 50, ../sass/layout/_panels.scss */
+/* line 52, ../sass/layout/_panels.scss */
 .panels-list .pane-title {
   text-align: center;
   font-size: 1.875em;
   text-transform: uppercase;
   margin-bottom: 1em;
 }
-/* line 57, ../sass/layout/_panels.scss */
+/* line 59, ../sass/layout/_panels.scss */
 .panels-list h3 {
   text-transform: uppercase;
   margin-bottom: 1em;
@@ -897,7 +897,42 @@ footer {
   font-weight: 700;
 }
 
-/* line 66, ../sass/layout/_panels.scss */
+/* line 70, ../sass/layout/_panels.scss */
+.mission {
+  background: #f1f2f5;
+}
+/* line 73, ../sass/layout/_panels.scss */
+.mission .pane-list__desc .field-item > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  padding: 1em 0 0 1em;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* line 84, ../sass/layout/_panels.scss */
+.mission .field-item > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  padding: 1em 1em 1em 1em;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 3px;
+}
+/* line 94, ../sass/layout/_panels.scss */
+.mission .field-item > * img {
+  width: 24%;
+  margin-top: -50px;
+  background-color: #fff;
+  border: 5px solid transparent;
+  border-radius: 200px;
+}
+
+/* line 105, ../sass/layout/_panels.scss */
 .panels-list > * {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -906,8 +941,13 @@ footer {
   padding: 1em 0 0 1em;
 }
 
+/* line 113, ../sass/layout/_panels.scss */
+.pane-list__desc {
+  padding-bottom: 5em;
+}
+
 @supports (display: grid) {
-  /* line 78, ../sass/layout/_panels.scss */
+  /* line 120, ../sass/layout/_panels.scss */
   .panels-list {
     display: -ms-grid;
     grid-gap: 0.125em;
@@ -915,7 +955,7 @@ footer {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 85, ../sass/layout/_panels.scss */
+  /* line 127, ../sass/layout/_panels.scss */
   .panels-list > * {
     grid-column: col 2/ span 10;
   }
