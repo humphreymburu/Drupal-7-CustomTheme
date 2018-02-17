@@ -470,27 +470,10 @@ a:hover {
 }
 
 /* line 74, ../sass/base/_base.scss */
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
+p {
+  line-height: 1.625em;
 }
 
-/* line 82, ../sass/base/_base.scss */
-* html .clearfix {
-  zoom: 1;
-}
-
-/* IE6 */
-/* line 83, ../sass/base/_base.scss */
-*:first-child + html .clearfix {
-  zoom: 1;
-}
-
-/* IE7 */
 /* line 3, ../sass/layout/_layout.scss */
 .wrapper {
   margin: 0 auto;
@@ -685,26 +668,18 @@ main {
 .ribbon {
   background-color: #f1f2f5;
   background-size: cover;
-  padding-top: 2.525em;
-  padding-bottom: 2.525em;
-}
-
-/* line 97, ../sass/layout/_main.scss */
-.ribbon {
-  background-color: #f1f2f5;
-  background-size: cover;
   padding-top: 2.325em;
   padding-bottom: 2.325em;
 }
-/* line 105, ../sass/layout/_main.scss */
+/* line 98, ../sass/layout/_main.scss */
 .ribbon .date-display-single {
   font-weight: 700;
 }
-/* line 110, ../sass/layout/_main.scss */
+/* line 103, ../sass/layout/_main.scss */
 .ribbon p {
   line-height: 1.625em;
 }
-/* line 114, ../sass/layout/_main.scss */
+/* line 107, ../sass/layout/_main.scss */
 .ribbon .fieldable-panels-pane {
   position: relative;
   display: flex;
@@ -712,13 +687,13 @@ main {
   align-items: center;
   flex-wrap: wrap;
 }
-/* line 121, ../sass/layout/_main.scss */
+/* line 114, ../sass/layout/_main.scss */
 .ribbon .fieldable-panels-pane {
   flex: 0 0 50%;
 }
 
 @supports (display: grid) {
-  /* line 130, ../sass/layout/_main.scss */
+  /* line 123, ../sass/layout/_main.scss */
   .ribbon {
     display: -ms-grid;
     display: grid;
@@ -727,17 +702,17 @@ main {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 137, ../sass/layout/_main.scss */
+  /* line 130, ../sass/layout/_main.scss */
   .ribbon > * {
     grid-column: col 2/ span 10;
   }
 
-  /* line 141, ../sass/layout/_main.scss */
+  /* line 134, ../sass/layout/_main.scss */
   .field-name-field-register {
     grid-column: col 11/ span 2;
     grid-row: 1;
   }
-  /* line 145, ../sass/layout/_main.scss */
+  /* line 138, ../sass/layout/_main.scss */
   .field-name-field-register a {
     background-color: #61c0bd;
     padding: 0.75em 1.5em;
@@ -750,7 +725,7 @@ main {
     white-space: nowrap;
   }
 }
-/* line 163, ../sass/layout/_main.scss */
+/* line 156, ../sass/layout/_main.scss */
 .field-name-field-event-date .field-label {
   text-transform: uppercase;
   color: #61c0bd;
@@ -855,6 +830,93 @@ footer {
 
   /* line 27, ../sass/layout/_footer.scss */
   footer > * {
+    grid-column: col 2/ span 10;
+  }
+}
+/*--------------------------------------------------------------
+## panels
+--------------------------------------------------------------*/
+/* line 7, ../sass/layout/_panels.scss */
+.panels-list {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 79.0625em;
+  padding-left: 6em;
+  padding-right: 6em;
+}
+
+/* line 15, ../sass/layout/_panels.scss */
+.panels-list {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+}
+/* line 29, ../sass/layout/_panels.scss */
+.panels-list .field-item {
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* line 38, ../sass/layout/_panels.scss */
+.panels-list .field-item > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33%;
+  -ms-flex: 0 0 33%;
+  flex: 0 0 33%;
+  padding: 1em 0 0 1em;
+  text-align: center;
+}
+/* line 46, ../sass/layout/_panels.scss */
+.panels-list img {
+  width: 38%;
+}
+/* line 50, ../sass/layout/_panels.scss */
+.panels-list .pane-title {
+  text-align: center;
+  font-size: 1.875em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+/* line 57, ../sass/layout/_panels.scss */
+.panels-list h3 {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  font-weight: 700;
+}
+
+/* line 66, ../sass/layout/_panels.scss */
+.panels-list > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  padding: 1em 0 0 1em;
+}
+
+@supports (display: grid) {
+  /* line 78, ../sass/layout/_panels.scss */
+  .panels-list {
+    display: -ms-grid;
+    grid-gap: 0.125em;
+    -ms-grid-columns: repeat(12, [col] 1fr );
+    grid-template-columns: repeat(12, [col] 1fr );
+  }
+
+  /* line 85, ../sass/layout/_panels.scss */
+  .panels-list > * {
     grid-column: col 2/ span 10;
   }
 }
