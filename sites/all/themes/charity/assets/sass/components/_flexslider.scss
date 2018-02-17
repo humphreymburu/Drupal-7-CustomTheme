@@ -23,7 +23,54 @@
         background: #57c0d5;
 
     }
-  
+
+    .flex-control-paging li a {
+        background: #979eb1;
+    }
+
+}
+
+.panel-blog{
+
+    .panel-blog__title{
+        margin-bottom: 1em;
+        margin-top: 1em;
+        border-bottom: 1px;
+        border-style: solid;
+        padding-bottom: 0.5125em;
+        border-color: #f1f2f5;
+        font-weight: 700;
+    }
+    .panel-blog__date{
+        margin-bottom: 1em;
+        margin-top: 1em;
+        border-top: 1px;
+        border-style: solid;
+        padding-top: 0.5125em;
+        border-color: #f1f2f5;
+        font-weight: 500;
+    }
+
+    .flexslider, .slides {
+        align-items: center;
+        position: relative;
+        justify-content: space-around;
+        display: flex !important;
+        background: transparent;;
+        border: none;
+
+    }
+    .flexslider, .slides > * {
+        padding: 1em 0 0 1em;
+        text-align: left;
+         
+        &:li{
+            width:50%;
+         }
+    } 
+    .flex-control-paging li a.flex-active {
+        background: #57c0d5;
+    }
     .flex-control-paging li a {
         background: #979eb1;
     }

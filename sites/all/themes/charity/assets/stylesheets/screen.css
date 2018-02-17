@@ -616,70 +616,70 @@ main {
     grid-row: 5/12;
   }
 }
-/* line 49, ../sass/layout/_main.scss */
+/* line 47, ../sass/layout/_main.scss */
 .l-outer__inner {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 56, ../sass/layout/_main.scss */
+/* line 54, ../sass/layout/_main.scss */
 .l-sidebar-first {
   grid-column: col / span 3;
   grid-row: 3/5;
 }
 
-/* line 61, ../sass/layout/_main.scss */
+/* line 59, ../sass/layout/_main.scss */
 .l-main-content {
   grid-column: col 4 / span 8;
 }
 
-/* line 64, ../sass/layout/_main.scss */
+/* line 62, ../sass/layout/_main.scss */
 .l-main-content__full {
   grid-column: col / span 12;
   max-width: 100%;
 }
 
-/* line 68, ../sass/layout/_main.scss */
+/* line 66, ../sass/layout/_main.scss */
 .l-sidebar-second {
   grid-column: col 10 / span 3;
 }
 
-/* line 71, ../sass/layout/_main.scss */
+/* line 69, ../sass/layout/_main.scss */
 .l-main-content__left-content {
   grid-column: col / span 10;
 }
 
-/* line 75, ../sass/layout/_main.scss */
+/* line 73, ../sass/layout/_main.scss */
 .l-sidebar-second__right {
   grid-column: col 10 / span 3;
 }
 
-/* line 79, ../sass/layout/_main.scss */
+/* line 77, ../sass/layout/_main.scss */
 .l-main-content__right-content {
   grid-column: col 4 / span 10;
 }
 
-/* line 83, ../sass/layout/_main.scss */
+/* line 81, ../sass/layout/_main.scss */
 .l-sidebar-first__left {
   grid-column: col / span 3;
 }
 
-/* line 90, ../sass/layout/_main.scss */
+/* line 88, ../sass/layout/_main.scss */
 .ribbon {
   background-color: #f1f2f5;
   background-size: cover;
   padding-top: 2.325em;
   padding-bottom: 2.325em;
 }
-/* line 98, ../sass/layout/_main.scss */
+/* line 96, ../sass/layout/_main.scss */
 .ribbon .date-display-single {
   font-weight: 700;
 }
-/* line 103, ../sass/layout/_main.scss */
+/* line 101, ../sass/layout/_main.scss */
 .ribbon p {
   line-height: 1.625em;
 }
-/* line 107, ../sass/layout/_main.scss */
+/* line 105, ../sass/layout/_main.scss */
 .ribbon .fieldable-panels-pane {
   position: relative;
   display: flex;
@@ -687,13 +687,13 @@ main {
   align-items: center;
   flex-wrap: wrap;
 }
-/* line 114, ../sass/layout/_main.scss */
+/* line 112, ../sass/layout/_main.scss */
 .ribbon .fieldable-panels-pane {
   flex: 0 0 50%;
 }
 
 @supports (display: grid) {
-  /* line 123, ../sass/layout/_main.scss */
+  /* line 121, ../sass/layout/_main.scss */
   .ribbon {
     display: -ms-grid;
     display: grid;
@@ -702,17 +702,17 @@ main {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 130, ../sass/layout/_main.scss */
+  /* line 128, ../sass/layout/_main.scss */
   .ribbon > * {
     grid-column: col 2/ span 10;
   }
 
-  /* line 134, ../sass/layout/_main.scss */
+  /* line 132, ../sass/layout/_main.scss */
   .field-name-field-register {
     grid-column: col 11/ span 2;
     grid-row: 1;
   }
-  /* line 138, ../sass/layout/_main.scss */
+  /* line 136, ../sass/layout/_main.scss */
   .field-name-field-register a {
     background-color: #61c0bd;
     padding: 0.75em 1.5em;
@@ -725,7 +725,7 @@ main {
     white-space: nowrap;
   }
 }
-/* line 156, ../sass/layout/_main.scss */
+/* line 154, ../sass/layout/_main.scss */
 .field-name-field-event-date .field-label {
   text-transform: uppercase;
   color: #51c0bd;
@@ -953,6 +953,22 @@ footer {
 }
 
 /* line 126, ../sass/layout/_panels.scss */
+.pane-blog {
+  background: #fff;
+}
+/* line 130, ../sass/layout/_panels.scss */
+.pane-blog .field-item > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  padding: 1em 0 0 1em;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* line 144, ../sass/layout/_panels.scss */
 .panels-list > * {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -961,13 +977,18 @@ footer {
   padding: 1em 0 0 1em;
 }
 
-/* line 134, ../sass/layout/_panels.scss */
+/* line 152, ../sass/layout/_panels.scss */
 .pane-list__desc {
   padding-bottom: 5em;
 }
 
+/* line 156, ../sass/layout/_panels.scss */
+.blog {
+  text-align: left;
+}
+
 @supports (display: grid) {
-  /* line 141, ../sass/layout/_panels.scss */
+  /* line 162, ../sass/layout/_panels.scss */
   .panels-list {
     display: -ms-grid;
     grid-gap: 0.125em;
@@ -975,7 +996,7 @@ footer {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 148, ../sass/layout/_panels.scss */
+  /* line 169, ../sass/layout/_panels.scss */
   .panels-list > * {
     grid-column: col 2/ span 10;
   }
@@ -1003,5 +1024,52 @@ footer {
 }
 /* line 27, ../sass/components/_flexslider.scss */
 .members .flex-control-paging li a {
+  background: #979eb1;
+}
+
+/* line 35, ../sass/components/_flexslider.scss */
+.panel-blog .panel-blog__title {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border-bottom: 1px;
+  border-style: solid;
+  padding-bottom: 0.5125em;
+  border-color: #f1f2f5;
+  font-weight: 700;
+}
+/* line 44, ../sass/components/_flexslider.scss */
+.panel-blog .panel-blog__date {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border-top: 1px;
+  border-style: solid;
+  padding-top: 0.5125em;
+  border-color: #f1f2f5;
+  font-weight: 500;
+}
+/* line 54, ../sass/components/_flexslider.scss */
+.panel-blog .flexslider, .panel-blog .slides {
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
+  display: flex !important;
+  background: transparent;
+  border: none;
+}
+/* line 63, ../sass/components/_flexslider.scss */
+.panel-blog .flexslider, .panel-blog .slides > * {
+  padding: 1em 0 0 1em;
+  text-align: left;
+}
+/* line 67, ../sass/components/_flexslider.scss */
+.panel-blog .flexslider:li, .panel-blog .slides > *:li {
+  width: 50%;
+}
+/* line 71, ../sass/components/_flexslider.scss */
+.panel-blog .flex-control-paging li a.flex-active {
+  background: #57c0d5;
+}
+/* line 74, ../sass/components/_flexslider.scss */
+.panel-blog .flex-control-paging li a {
   background: #979eb1;
 }
