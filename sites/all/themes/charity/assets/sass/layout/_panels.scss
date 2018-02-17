@@ -102,6 +102,27 @@
 
 }
 
+.members {
+    background: #f1f2f5;
+    
+    
+    .field-item > * {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        padding: 1em 0 0 1em;
+        text-align: center;
+        background-color: transparent;
+        border-radius: 0;
+
+        img {
+            width: 55%;       
+        }
+    }
+
+}
+
 .panels-list > * {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 100%;

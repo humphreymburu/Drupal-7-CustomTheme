@@ -728,7 +728,7 @@ main {
 /* line 156, ../sass/layout/_main.scss */
 .field-name-field-event-date .field-label {
   text-transform: uppercase;
-  color: #61c0bd;
+  color: #51c0bd;
 }
 
 /*--------------------------------------------------------------
@@ -933,6 +933,26 @@ footer {
 }
 
 /* line 105, ../sass/layout/_panels.scss */
+.members {
+  background: #f1f2f5;
+}
+/* line 109, ../sass/layout/_panels.scss */
+.members .field-item > * {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  padding: 1em 0 0 1em;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* line 119, ../sass/layout/_panels.scss */
+.members .field-item > * img {
+  width: 55%;
+}
+
+/* line 126, ../sass/layout/_panels.scss */
 .panels-list > * {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -941,13 +961,13 @@ footer {
   padding: 1em 0 0 1em;
 }
 
-/* line 113, ../sass/layout/_panels.scss */
+/* line 134, ../sass/layout/_panels.scss */
 .pane-list__desc {
   padding-bottom: 5em;
 }
 
 @supports (display: grid) {
-  /* line 120, ../sass/layout/_panels.scss */
+  /* line 141, ../sass/layout/_panels.scss */
   .panels-list {
     display: -ms-grid;
     grid-gap: 0.125em;
@@ -955,8 +975,33 @@ footer {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 127, ../sass/layout/_panels.scss */
+  /* line 148, ../sass/layout/_panels.scss */
   .panels-list > * {
     grid-column: col 2/ span 10;
   }
+}
+/*--------------------------------------------------------------
+## flexslider
+--------------------------------------------------------------*/
+/* line 7, ../sass/components/_flexslider.scss */
+.members .flexslider, .members .slides {
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
+  display: flex !important;
+  background: transparent;
+  border: none;
+}
+/* line 17, ../sass/components/_flexslider.scss */
+.members .flexslider, .members .slides > * {
+  padding: 1em 0 0 1em;
+  text-align: center;
+}
+/* line 22, ../sass/components/_flexslider.scss */
+.members .flex-control-paging li a.flex-active {
+  background: #57c0d5;
+}
+/* line 27, ../sass/components/_flexslider.scss */
+.members .flex-control-paging li a {
+  background: #979eb1;
 }

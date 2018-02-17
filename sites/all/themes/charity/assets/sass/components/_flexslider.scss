@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+## flexslider
+--------------------------------------------------------------*/
+
+
+.members{
+    .flexslider, .slides {
+        align-items: center;
+        position: relative;
+        justify-content: space-around;
+        display: flex !important;
+        background: transparent;;
+        border: none;
+
+    }
+   
+    .flexslider, .slides > * {
+        padding: 1em 0 0 1em;
+        text-align: center;
+    } 
+
+    .flex-control-paging li a.flex-active {
+        background: #57c0d5;
+
+    }
+  
+    .flex-control-paging li a {
+        background: #979eb1;
+    }
+
+}
