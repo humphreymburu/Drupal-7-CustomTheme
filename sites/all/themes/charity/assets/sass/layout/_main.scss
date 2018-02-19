@@ -21,6 +21,7 @@ main {
     }
     main > * {
         grid-column: col 1/ span 12;
+        grid-row: 1;
     }
 
 

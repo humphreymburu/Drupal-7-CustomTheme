@@ -363,6 +363,44 @@ template {
   display: none;
 }
 
+   /*
+* @font-face mixin
+* @include fontface('family', 'assets/fonts/', 'myfontname');
+*/
+@font-face {
+  font-family: "MuseoSans";
+  src: url("/assets/fonts/MuseoSans-300.otf") format("opentype"), url("/assets/fonts/MuseoSans-300.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("/assets/fonts/OpenSans-Regular.otf") format("opentype"), url("/assets/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MuseoSans_500";
+  src: url("/assets/fonts/MuseoSans_500.otf") format("opentype"), url("/assets/fonts/MuseoSans_500.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MuseoSans_700";
+  src: url("/assets/fonts/MuseoSans_700.otf") format("opentype"), url("/assets/fonts/MuseoSans_700.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 71, ../sass/abstracts/_variables.scss */
+h1, h2, h3 {
+  font-family: 'MuseoSans', sans-serif;
+}
+
+/* line 74, ../sass/abstracts/_variables.scss */
+h1 {
+  font-weight: 100;
+}
+
 /* Apply a natural box layout model to all elements http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 /* line 2, ../sass/base/_base.scss */
 html {
@@ -385,77 +423,78 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
-/* line 21, ../sass/base/_base.scss */
+/* line 20, ../sass/base/_base.scss */
 body {
   line-height: 1;
+  background-color: #fff;
+  font-family: "OpenSans", sans-serif;
 }
 
-/* line 24, ../sass/base/_base.scss */
+/* line 26, ../sass/base/_base.scss */
 blockquote {
   quotes: none;
 }
 
-/* line 27, ../sass/base/_base.scss */
+/* line 29, ../sass/base/_base.scss */
 blockquote:before {
   content: '';
   content: none;
 }
 
-/* line 31, ../sass/base/_base.scss */
+/* line 33, ../sass/base/_base.scss */
 blockquote:after {
   content: '';
   content: none;
 }
 
-/* line 35, ../sass/base/_base.scss */
+/* line 37, ../sass/base/_base.scss */
 q {
   quotes: none;
 }
 
-/* line 38, ../sass/base/_base.scss */
+/* line 40, ../sass/base/_base.scss */
 q:before {
   content: '';
   content: none;
 }
 
-/* line 42, ../sass/base/_base.scss */
+/* line 44, ../sass/base/_base.scss */
 q:after {
   content: '';
   content: none;
 }
 
-/* line 46, ../sass/base/_base.scss */
+/* line 48, ../sass/base/_base.scss */
 ol {
   list-style: none;
 }
 
-/* line 49, ../sass/base/_base.scss */
+/* line 51, ../sass/base/_base.scss */
 ul {
   list-style: none;
 }
 
-/* line 52, ../sass/base/_base.scss */
+/* line 54, ../sass/base/_base.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 56, ../sass/base/_base.scss */
+/* line 58, ../sass/base/_base.scss */
 article, aside, details, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 59, ../sass/base/_base.scss */
+/* line 61, ../sass/base/_base.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 64, ../sass/base/_base.scss */
+/* line 66, ../sass/base/_base.scss */
 a {
   text-decoration: none;
   color: #57c0d5;
@@ -463,15 +502,20 @@ a {
   -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
 }
-/* line 68, ../sass/base/_base.scss */
+/* line 70, ../sass/base/_base.scss */
 a:hover {
   text-decoration: none;
   color: #57c0d5;
 }
 
-/* line 74, ../sass/base/_base.scss */
+/* line 76, ../sass/base/_base.scss */
 p {
   line-height: 1.625em;
+}
+
+/* line 80, ../sass/base/_base.scss */
+hr {
+  border: 1px solid #585b61;
 }
 
 /* line 3, ../sass/layout/_layout.scss */
@@ -598,10 +642,11 @@ main {
   /* line 22, ../sass/layout/_main.scss */
   main > * {
     grid-column: col 1/ span 12;
+    grid-row: 1;
   }
 }
 @supports (display: grid) {
-  /* line 31, ../sass/layout/_main.scss */
+  /* line 32, ../sass/layout/_main.scss */
   .slider {
     display: -ms-grid;
     display: grid;
@@ -610,76 +655,76 @@ main {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 38, ../sass/layout/_main.scss */
+  /* line 39, ../sass/layout/_main.scss */
   .slider > * {
     grid-column: col 2/ span 10;
     grid-row: 5/12;
   }
 }
-/* line 47, ../sass/layout/_main.scss */
+/* line 48, ../sass/layout/_main.scss */
 .l-outer__inner {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 54, ../sass/layout/_main.scss */
+/* line 55, ../sass/layout/_main.scss */
 .l-sidebar-first {
   grid-column: col / span 3;
   grid-row: 3/5;
 }
 
-/* line 59, ../sass/layout/_main.scss */
+/* line 60, ../sass/layout/_main.scss */
 .l-main-content {
   grid-column: col 4 / span 8;
 }
 
-/* line 62, ../sass/layout/_main.scss */
+/* line 63, ../sass/layout/_main.scss */
 .l-main-content__full {
   grid-column: col / span 12;
   max-width: 100%;
 }
 
-/* line 66, ../sass/layout/_main.scss */
+/* line 67, ../sass/layout/_main.scss */
 .l-sidebar-second {
   grid-column: col 10 / span 3;
 }
 
-/* line 69, ../sass/layout/_main.scss */
+/* line 70, ../sass/layout/_main.scss */
 .l-main-content__left-content {
   grid-column: col / span 10;
 }
 
-/* line 73, ../sass/layout/_main.scss */
+/* line 74, ../sass/layout/_main.scss */
 .l-sidebar-second__right {
   grid-column: col 10 / span 3;
 }
 
-/* line 77, ../sass/layout/_main.scss */
+/* line 78, ../sass/layout/_main.scss */
 .l-main-content__right-content {
   grid-column: col 4 / span 10;
 }
 
-/* line 81, ../sass/layout/_main.scss */
+/* line 82, ../sass/layout/_main.scss */
 .l-sidebar-first__left {
   grid-column: col / span 3;
 }
 
-/* line 88, ../sass/layout/_main.scss */
+/* line 89, ../sass/layout/_main.scss */
 .ribbon {
   background-color: #f1f2f5;
   background-size: cover;
   padding-top: 2.325em;
   padding-bottom: 2.325em;
 }
-/* line 96, ../sass/layout/_main.scss */
+/* line 97, ../sass/layout/_main.scss */
 .ribbon .date-display-single {
   font-weight: 700;
 }
-/* line 101, ../sass/layout/_main.scss */
+/* line 102, ../sass/layout/_main.scss */
 .ribbon p {
   line-height: 1.625em;
 }
-/* line 105, ../sass/layout/_main.scss */
+/* line 106, ../sass/layout/_main.scss */
 .ribbon .fieldable-panels-pane {
   position: relative;
   display: flex;
@@ -687,13 +732,13 @@ main {
   align-items: center;
   flex-wrap: wrap;
 }
-/* line 112, ../sass/layout/_main.scss */
+/* line 113, ../sass/layout/_main.scss */
 .ribbon .fieldable-panels-pane {
   flex: 0 0 50%;
 }
 
 @supports (display: grid) {
-  /* line 121, ../sass/layout/_main.scss */
+  /* line 122, ../sass/layout/_main.scss */
   .ribbon {
     display: -ms-grid;
     display: grid;
@@ -702,17 +747,17 @@ main {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 128, ../sass/layout/_main.scss */
+  /* line 129, ../sass/layout/_main.scss */
   .ribbon > * {
     grid-column: col 2/ span 10;
   }
 
-  /* line 132, ../sass/layout/_main.scss */
+  /* line 133, ../sass/layout/_main.scss */
   .field-name-field-register {
     grid-column: col 11/ span 2;
     grid-row: 1;
   }
-  /* line 136, ../sass/layout/_main.scss */
+  /* line 137, ../sass/layout/_main.scss */
   .field-name-field-register a {
     background-color: #61c0bd;
     padding: 0.75em 1.5em;
@@ -725,7 +770,7 @@ main {
     white-space: nowrap;
   }
 }
-/* line 154, ../sass/layout/_main.scss */
+/* line 155, ../sass/layout/_main.scss */
 .field-name-field-event-date .field-label {
   text-transform: uppercase;
   color: #51c0bd;
@@ -786,12 +831,13 @@ header {
   line-height: 1.625em;
 }
 /* line 54, ../sass/layout/_header.scss */
-.slider .field-items h2 {
+.slider .field-items h1 {
   font-size: 2.5em;
+  text-transform: uppercase;
   margin-bottom: 0.625em;
 }
 
-/* line 63, ../sass/layout/_header.scss */
+/* line 64, ../sass/layout/_header.scss */
 .pane-style-full {
   background-size: cover;
   overflow: auto;
@@ -816,10 +862,19 @@ footer {
   position: relative;
   display: flex;
   justify-content: center;
+  background-color: #454850;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  color: #979eb1;
+}
+/* line 22, ../sass/layout/_footer.scss */
+footer p {
+  line-height: 2.825em;
 }
 
 @supports (display: grid) {
-  /* line 20, ../sass/layout/_footer.scss */
+  /* line 29, ../sass/layout/_footer.scss */
   footer {
     display: -ms-grid;
     display: grid;
@@ -828,7 +883,7 @@ footer {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 27, ../sass/layout/_footer.scss */
+  /* line 36, ../sass/layout/_footer.scss */
   footer > * {
     grid-column: col 2/ span 10;
   }
@@ -936,7 +991,15 @@ footer {
 .members {
   background: #f1f2f5;
 }
-/* line 109, ../sass/layout/_panels.scss */
+/* line 108, ../sass/layout/_panels.scss */
+.members .pane-title {
+  text-align: center;
+  font-size: 1.875em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  border-top: 1px solid #d9dadd;
+}
+/* line 115, ../sass/layout/_panels.scss */
 .members .field-item > * {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -947,16 +1010,16 @@ footer {
   background-color: transparent;
   border-radius: 0;
 }
-/* line 119, ../sass/layout/_panels.scss */
+/* line 125, ../sass/layout/_panels.scss */
 .members .field-item > * img {
   width: 55%;
 }
 
-/* line 126, ../sass/layout/_panels.scss */
+/* line 132, ../sass/layout/_panels.scss */
 .pane-blog {
   background: #fff;
 }
-/* line 130, ../sass/layout/_panels.scss */
+/* line 136, ../sass/layout/_panels.scss */
 .pane-blog .field-item > * {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -968,7 +1031,7 @@ footer {
   border-radius: 0;
 }
 
-/* line 144, ../sass/layout/_panels.scss */
+/* line 150, ../sass/layout/_panels.scss */
 .panels-list > * {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -977,18 +1040,18 @@ footer {
   padding: 1em 0 0 1em;
 }
 
-/* line 152, ../sass/layout/_panels.scss */
+/* line 158, ../sass/layout/_panels.scss */
 .pane-list__desc {
   padding-bottom: 5em;
 }
 
-/* line 156, ../sass/layout/_panels.scss */
+/* line 162, ../sass/layout/_panels.scss */
 .blog {
   text-align: left;
 }
 
 @supports (display: grid) {
-  /* line 162, ../sass/layout/_panels.scss */
+  /* line 168, ../sass/layout/_panels.scss */
   .panels-list {
     display: -ms-grid;
     grid-gap: 0.125em;
@@ -996,7 +1059,7 @@ footer {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 169, ../sass/layout/_panels.scss */
+  /* line 175, ../sass/layout/_panels.scss */
   .panels-list > * {
     grid-column: col 2/ span 10;
   }
@@ -1012,22 +1075,23 @@ footer {
   display: flex !important;
   background: transparent;
   border: none;
+  margin: 0 0 0.5em;
 }
-/* line 17, ../sass/components/_flexslider.scss */
+/* line 16, ../sass/components/_flexslider.scss */
 .members .flexslider, .members .slides > * {
   padding: 1em 0 0 1em;
   text-align: center;
 }
-/* line 22, ../sass/components/_flexslider.scss */
+/* line 21, ../sass/components/_flexslider.scss */
 .members .flex-control-paging li a.flex-active {
   background: #57c0d5;
 }
-/* line 27, ../sass/components/_flexslider.scss */
+/* line 26, ../sass/components/_flexslider.scss */
 .members .flex-control-paging li a {
   background: #979eb1;
 }
 
-/* line 35, ../sass/components/_flexslider.scss */
+/* line 34, ../sass/components/_flexslider.scss */
 .panel-blog .panel-blog__title {
   margin-bottom: 1em;
   margin-top: 1em;
@@ -1037,7 +1101,7 @@ footer {
   border-color: #f1f2f5;
   font-weight: 700;
 }
-/* line 44, ../sass/components/_flexslider.scss */
+/* line 43, ../sass/components/_flexslider.scss */
 .panel-blog .panel-blog__date {
   margin-bottom: 1em;
   margin-top: 1em;
@@ -1047,7 +1111,7 @@ footer {
   border-color: #f1f2f5;
   font-weight: 500;
 }
-/* line 54, ../sass/components/_flexslider.scss */
+/* line 53, ../sass/components/_flexslider.scss */
 .panel-blog .flexslider, .panel-blog .slides {
   align-items: center;
   position: relative;
@@ -1056,20 +1120,20 @@ footer {
   background: transparent;
   border: none;
 }
-/* line 63, ../sass/components/_flexslider.scss */
+/* line 62, ../sass/components/_flexslider.scss */
 .panel-blog .flexslider, .panel-blog .slides > * {
   padding: 1em 0 0 1em;
   text-align: left;
 }
-/* line 67, ../sass/components/_flexslider.scss */
+/* line 66, ../sass/components/_flexslider.scss */
 .panel-blog .flexslider:li, .panel-blog .slides > *:li {
   width: 50%;
 }
-/* line 71, ../sass/components/_flexslider.scss */
+/* line 70, ../sass/components/_flexslider.scss */
 .panel-blog .flex-control-paging li a.flex-active {
   background: #57c0d5;
 }
-/* line 74, ../sass/components/_flexslider.scss */
+/* line 73, ../sass/components/_flexslider.scss */
 .panel-blog .flex-control-paging li a {
   background: #979eb1;
 }

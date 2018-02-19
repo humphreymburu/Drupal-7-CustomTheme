@@ -15,12 +15,14 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     padding:0;
     border:0;
     font-size:100%;
-    font:inherit;
     vertical-align:baseline;
 }
 body{
     line-height:1;
+    background-color: $body-bg;
+    font-family: $body-font-family;
 }
+
 blockquote{
     quotes:none;
 }
@@ -74,3 +76,8 @@ a {
 p {
     line-height: 1.625em;
 }
+
+hr {
+    border: 1px solid #585b61;
+}
+

@@ -1,3 +1,9 @@
+@include fontface('MuseoSans', '/assets/fonts', 'MuseoSans-300');
+@include fontface('OpenSans', '/assets/fonts', 'OpenSans-Regular');
+@include fontface('MuseoSans_500', '/assets/fonts', 'MuseoSans_500');
+@include fontface('MuseoSans_700', '/assets/fonts', 'MuseoSans_700');
+
+
 // Media queries breakpoints
 
 // Here we define the breakpoints which will become the upper border for each media size.
@@ -35,11 +41,12 @@ $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-tide)})" !default
 //$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
 
 
+
 // Various global styles
 
 $body-bg: #fff;
 $body-font-color: #5b6172;
-//$body-font-family: "Open Sans", Arial, sans-serif;
+$body-font-family: "OpenSans", sans-serif;
 $body-font-weight: normal;
 $body-font-style: normal;
 
@@ -61,15 +68,16 @@ $minor-color: #5b6172;
 //
 
 // Control header font styles
-
-$head-font-family: "Source Sans Pro", Arial, sans-serif;
+h1,h2,h3{
+    font-family: 'MuseoSans', sans-serif;
+}
+h1{
+    font-weight: 100;
+}
+$head-font-family:'MuseoSans', sans-serif;
 $head-font-weight: bold;
 $head-font-style: normal;
-$head-font-color: #563521;
-$head-line-height: 1.4;
-$head-top-margin: .2em;
-$head-bottom-margin: .5em;
-$head-text-rendering: optimizeLegibility;
+
 
 // Control header font sizes
 

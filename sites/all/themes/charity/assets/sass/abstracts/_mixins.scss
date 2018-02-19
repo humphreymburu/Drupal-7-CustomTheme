@@ -5,3 +5,19 @@
      -moz-transition: $type $speed $transition;
      -webkit-transition: $type $speed $transition;
     }
+
+    /*
+ * @font-face mixin
+ * @include fontface('family', 'assets/fonts/', 'myfontname');
+ */
+
+@mixin fontface($font-family, $font-url, $font-name, $style: normal, $weight: normal) {
+	@font-face {
+        font-family: $font-family;
+        src: url($font-url + '/' + $font-name + '.otf') format('opentype'),
+             url($font-url + '/' + $font-name + '.ttf')  format('truetype');
+
+        font-style: $style;
+        font-weight: $weight;     
+	}
+}
