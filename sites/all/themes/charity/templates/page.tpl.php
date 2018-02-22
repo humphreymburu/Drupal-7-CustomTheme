@@ -18,7 +18,7 @@
  * @ingroup themeable
  */
 ?>
-
+<div class="site-container">
   <header class="l-header">
    <div class="l-header__inner">
       <div class="branding">
@@ -133,5 +133,5 @@
       </div> <!-- /#footer -->
     </footer> <!-- /#footer-outer-wrapper -->
   <?php endif; ?>
-
+    </div>
 

@@ -3,15 +3,7 @@
 --------------------------------------------------------------*/
 
 // Core region e.g Breadcrumbs,titles,feature and tabs
-
-main {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 79.0625em;
-}
-
 @supports (display: grid) {
-    
     main {
         display: -ms-grid;
         display: grid;
@@ -87,22 +79,15 @@ main {
 // New Events Ribbon
 
 .ribbon {
-
     background-color: #f1f2f5;
     background-size: cover;
-    padding-top: 2.325em;
-    padding-bottom: 2.325em;
-    
-    
+    padding-top: 2.1em;
+    padding-bottom: 1.8em;
+    font-family: "MuseoSans 500";
+
     .date-display-single {
         font-weight: 700;
     }
-
-
-    p {
-        line-height: 1.625em;
-    }
-
     .fieldable-panels-pane{
         position: relative;
         display: flex;
@@ -113,31 +98,38 @@ main {
     .fieldable-panels-pane {
         flex:0 0 50%;
     }
-
+    .events-ribbon {
+         .field:first-child{
+            margin-bottom: 0.8em;
+        }
+    }
 }
 
 
 @supports (display: grid) {
     
     .ribbon {
-        display: -ms-grid;
-        display: grid;
-        grid-gap: 0.125em;	
-        -ms-grid-columns: unquote("repeat(12, [col] 1fr )");	
-                grid-template-columns: unquote("repeat(12, [col] 1fr )");
-    }
-    .ribbon > * {
-        grid-column: col 2/ span 10;
-    }
-
-    .field-name-field-register {
-        grid-column: col 11/ span 2;
-        grid-row: 1;
-
+        .fieldable-panels-pane{
+            display: -ms-grid;
+            display: grid;
+            grid-gap: 0.125em;	
+            -ms-grid-columns: unquote("repeat(12, [col] 1fr )");	
+            grid-template-columns: unquote("repeat(12, [col] 1fr )");
+            margin:auto;
+            max-width: 1120px;
+        }
+        
+        .fieldable-panels-pane > * {
+            grid-column: col 1/ span 9;
+        }
+        .field-name-field-register {
+            grid-column: col 12;
+            grid-row: 1;
+        }
         a {
             //border: solid 1px #61c0bd;
             background-color: #61c0bd;
-            padding: 0.75em 1.5em;
+            padding: 0.75em 1.45em;
             margin: 0 0 0.75em 0;
             transition: background-color 200ms ease;
             user-select: none;
@@ -146,17 +138,14 @@ main {
             text-transform: uppercase;
             white-space: nowrap;
         }
+        .field-name-field-event-date {
+            .field-label{
+                text-transform: uppercase;
+                color:#51c0bd;
+            }
+         }
     }
+
+
 } 
 
-
-
-.field-name-field-event-date {
-   .field-label{
-       text-transform: uppercase;
-       color:#51c0bd;
-   }
-}
-
-
-    

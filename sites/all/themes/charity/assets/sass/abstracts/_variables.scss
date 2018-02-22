@@ -1,7 +1,7 @@
-@include fontface('MuseoSans', '/assets/fonts', 'MuseoSans-300');
-@include fontface('OpenSans', '/assets/fonts', 'OpenSans-Regular');
-@include fontface('MuseoSans_500', '/assets/fonts', 'MuseoSans_500');
-@include fontface('MuseoSans_700', '/assets/fonts', 'MuseoSans_700');
+@include fontface('MuseoSans', '../fonts', 'MuseoSans-300');
+@include fontface('OpenSans', '../fonts', 'OpenSans-Regular');
+@include fontface('MuseoSans 500', '../fonts', 'MuseoSans_500');
+@include fontface('MuseoSans 700', '../fonts', 'MuseoSans_700');
 
 
 // Media queries breakpoints
@@ -73,6 +73,9 @@ h1,h2,h3{
 }
 h1{
     font-weight: 100;
+}
+h2 {
+    font-size: 1.7em;
 }
 $head-font-family:'MuseoSans', sans-serif;
 $head-font-weight: bold;
