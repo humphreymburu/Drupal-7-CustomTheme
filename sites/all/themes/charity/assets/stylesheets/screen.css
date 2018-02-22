@@ -26,17 +26,23 @@
   font-style: normal;
   font-weight: normal;
 }
-/* line 71, ../sass/abstracts/_variables.scss */
+@font-face {
+  font-family: "MuseoSans Rounded";
+  src: url("../fonts/MuseoSans-Rounded-300.otf") format("opentype"), url("../fonts/MuseoSans-Rounded-300.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 74, ../sass/abstracts/_variables.scss */
 h1, h2, h3 {
   font-family: 'MuseoSans', sans-serif;
 }
 
-/* line 74, ../sass/abstracts/_variables.scss */
+/* line 77, ../sass/abstracts/_variables.scss */
 h1 {
   font-weight: 100;
 }
 
-/* line 77, ../sass/abstracts/_variables.scss */
+/* line 80, ../sass/abstracts/_variables.scss */
 h2 {
   font-size: 1.7em;
 }
@@ -872,7 +878,28 @@ template {
 .hero-container__content {
   margin: auto;
   max-width: 1110px;
-  padding: 6em 13vw;
+  padding: 2.9em 6em 1vw;
+  text-align: center;
+  color: white;
+}
+/* line 87, ../sass/layout/_header.scss */
+.hero-container__content h1 {
+  font-family: "MuseoSans Rounded", sans-serif;
+  text-transform: uppercase;
+  font-size: 3.375em;
+  letter-spacing: 0.0125em;
+}
+/* line 93, ../sass/layout/_header.scss */
+.hero-container__content p {
+  padding-bottom: 1.9em;
+  letter-spacing: 0.0125em;
+}
+/* line 97, ../sass/layout/_header.scss */
+.hero-container__content .hero-titles {
+  font-family: "OpenSans", sans-serif;
+  font-size: 1.01em;
+  padding-bottom: 1.7em;
+  letter-spacing: 1px;
 }
 
 /*--------------------------------------------------------------
