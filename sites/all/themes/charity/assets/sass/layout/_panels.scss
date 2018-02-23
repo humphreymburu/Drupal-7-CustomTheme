@@ -5,14 +5,12 @@
 // panel list
 
 .l-panels-region__inner {
-    background-color: yellow;
     width:100%;
 }
 
 .l-pane-region__inner {
-    .pane-content {
+    padding-top: 2.1875em;
 
-    }
     .fieldable-panels-pane{
         .field-item {
             align-items: center;
@@ -70,7 +68,7 @@
     p{
         font-family: "MuseoSans 500";
         font-size: 0.9375em;
-        padding-bottom: 2em;
+        padding-bottom: 1.5em;
     }
 
 
@@ -97,17 +95,16 @@
 }
 
 
-
-
 .members {
     background: #f1f2f5;
+    padding-bottom: 0.8em;
+    padding-top: 0;
     
     .pane-title {
         text-align: center;
         font-size: 1.7em;
         text-transform: uppercase;
         margin-bottom: 1em;
-        border-top: 1px solid #d9dadd;
     }
     .field-item > * {
         -webkit-box-flex: 0;
@@ -144,7 +141,13 @@
 }
 .blog {
     text-align: left;
-    
+
+    .pane-title {
+        text-align: center;
+        font-size: 1.7em;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
     .panel-blog__title{
         margin-bottom: 1em;
         margin-top: 1em;
@@ -156,7 +159,7 @@
     }
     .panel-blog__date{
         margin-bottom: 1em;
-        margin-top: 1em;
+        margin-top: 0.3em;
         border-top: 1px;
         border-style: solid;
         padding-top: 0.5125em;
@@ -183,6 +186,7 @@
 
 .mission-container{
     background-color:#f1f2f5;
+    padding-bottom: 3.7em;
     .fieldable-panels-pane a {
         background-color: transparent;
         border: none;
@@ -235,6 +239,10 @@
             transform: translateY(-35%);
             top: -35%;
         }
+        .field.field-name-field-involve {
+            border-bottom: 1px solid #d9dadd;
+            padding-bottom: 3em;
+        }
           
     }
 }
@@ -256,7 +264,6 @@
             width: 60%;
             height: auto;
         }
-
         a {
             background-color: transparent;
             border: none;
