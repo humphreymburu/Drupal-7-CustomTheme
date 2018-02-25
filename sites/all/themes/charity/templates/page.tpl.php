@@ -37,8 +37,10 @@
 
         <?php if ($main_menu): ?>
         <div class="main-menu">
-          <nav id ="main-menu" class="navigation clearfix" role="navigation">
-            <?php print theme('links__system_main_menu', array(
+          <nav id ="main-menu" class="navigation toggle" role="navigation">
+          <input class="menu-btn" type="checkbox" id="menu-btn">
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+           <?php print theme('links__system_main_menu', array(
               'links' => $main_menu,
               'attributes' => array(
                 'class' => array('menu'),
