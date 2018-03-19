@@ -43,9 +43,6 @@ $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-tide)}) and (max-
 $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-tide)})" !default;
 //$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
 
-
-
-
 // Various global styles
 
 $body-bg: #fff;

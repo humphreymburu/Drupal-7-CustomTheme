@@ -85,8 +85,23 @@
     padding-bottom: 1.8em;
     font-family: "MuseoSans 500";
 
+    @media #{$medium-only} { 
+        padding-left: 1em;
+        padding-right: 1em;
+     }
+ 
+
+     @media #{$small-only} { 
+        padding-left: 1em;
+        padding-right: 1em;
+     }
+
     .date-display-single {
         font-weight: 700;
+       
+        @media #{$small-only} {
+            line-height: 1.2em;
+        }
     }
     .fieldable-panels-pane{
         position: relative;
@@ -145,6 +160,8 @@
             }
          }
     }
+
+    
 
 
 } 

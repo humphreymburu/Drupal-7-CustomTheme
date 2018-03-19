@@ -9,19 +9,9 @@
     max-height: 80px;
 
     @media #{$medium-only} { 
-        background-color: coral;
-        display: flex;
-        align-content: center;
-        flex-wrap: wrap;
-        flex-direction: column;
-        position: fixed;
-        height:100%;
+       padding-left: 1em;
+       padding-right: 1em;
     }
-
-    @media #{$small-only} {
-        background-color: green;
-    }
-
 
 	
 }
@@ -102,6 +92,8 @@
         width:100%;
         height: 458px;
     }
+    
+       
     .hero-container__content {
         margin: auto;
         max-width: 1110px;
@@ -126,10 +118,32 @@
             letter-spacing: 1px;
             text-shadow: 0.3px 0.3px #252728;
         }
+
+        @media #{$small-only} {
+            h1 {
+                font-size: 2.375em;
+                letter-spacing: 0.0125em;
+            }
+            p {
+                padding-bottom: 1.9em;
+            }
+            .hero-titles {
+                font-size: 1em;
+                line-height: 1.2em;
+            } 
+        }
     }
 
 
+    @media #{$small-only} {
+        .hero-container__content {
+            margin: auto;
+            max-width: 100%;
+            padding: 1em;
+        }
+    }
 
+   
 
 // Responsive styles
 

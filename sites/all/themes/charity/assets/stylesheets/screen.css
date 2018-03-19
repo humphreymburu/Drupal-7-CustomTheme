@@ -32,17 +32,17 @@
   font-style: normal;
   font-weight: normal;
 }
-/* line 75, ../sass/abstracts/_variables.scss */
+/* line 72, ../sass/abstracts/_variables.scss */
 h1, h2, h3 {
   font-family: 'MuseoSans', sans-serif;
 }
 
-/* line 78, ../sass/abstracts/_variables.scss */
+/* line 75, ../sass/abstracts/_variables.scss */
 h1 {
   font-weight: 100;
 }
 
-/* line 81, ../sass/abstracts/_variables.scss */
+/* line 78, ../sass/abstracts/_variables.scss */
 h2 {
   font-size: 1.7em;
 }
@@ -842,11 +842,31 @@ template {
   padding-bottom: 1.8em;
   font-family: "MuseoSans 500";
 }
-/* line 88, ../sass/layout/_main.scss */
+@media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+  /* line 81, ../sass/layout/_main.scss */
+  .ribbon {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+@media only screen and (max-width: 40em) {
+  /* line 81, ../sass/layout/_main.scss */
+  .ribbon {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+/* line 99, ../sass/layout/_main.scss */
 .ribbon .date-display-single {
   font-weight: 700;
 }
-/* line 91, ../sass/layout/_main.scss */
+@media only screen and (max-width: 40em) {
+  /* line 99, ../sass/layout/_main.scss */
+  .ribbon .date-display-single {
+    line-height: 1.2em;
+  }
+}
+/* line 106, ../sass/layout/_main.scss */
 .ribbon .fieldable-panels-pane {
   position: relative;
   display: flex;
@@ -854,17 +874,17 @@ template {
   align-items: center;
   flex-wrap: wrap;
 }
-/* line 98, ../sass/layout/_main.scss */
+/* line 113, ../sass/layout/_main.scss */
 .ribbon .fieldable-panels-pane {
   flex: 0 0 50%;
 }
-/* line 102, ../sass/layout/_main.scss */
+/* line 117, ../sass/layout/_main.scss */
 .ribbon .events-ribbon .field:first-child {
   margin-bottom: 0.8em;
 }
 
 @supports (display: grid) {
-  /* line 112, ../sass/layout/_main.scss */
+  /* line 127, ../sass/layout/_main.scss */
   .ribbon .fieldable-panels-pane {
     display: -ms-grid;
     display: grid;
@@ -874,16 +894,16 @@ template {
     margin: auto;
     max-width: 1120px;
   }
-  /* line 122, ../sass/layout/_main.scss */
+  /* line 137, ../sass/layout/_main.scss */
   .ribbon .fieldable-panels-pane > * {
     grid-column: col 1/ span 9;
   }
-  /* line 125, ../sass/layout/_main.scss */
+  /* line 140, ../sass/layout/_main.scss */
   .ribbon .field-name-field-register {
     grid-column: col 12;
     grid-row: 1;
   }
-  /* line 129, ../sass/layout/_main.scss */
+  /* line 144, ../sass/layout/_main.scss */
   .ribbon a {
     background-color: #61c0bd;
     padding: 0.75em 1.45em;
@@ -895,7 +915,7 @@ template {
     text-transform: uppercase;
     white-space: nowrap;
   }
-  /* line 142, ../sass/layout/_main.scss */
+  /* line 157, ../sass/layout/_main.scss */
   .ribbon .field-name-field-event-date .field-label {
     text-transform: uppercase;
     color: #51c0bd;
@@ -915,23 +935,12 @@ template {
 @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
   /* line 4, ../sass/layout/_header.scss */
   .l-header__inner {
-    background-color: coral;
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    position: fixed;
-    height: 100%;
-  }
-}
-@media only screen and (max-width: 40em) {
-  /* line 4, ../sass/layout/_header.scss */
-  .l-header__inner {
-    background-color: green;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
 
-/* line 28, ../sass/layout/_header.scss */
+/* line 18, ../sass/layout/_header.scss */
 .l-header {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -944,13 +953,13 @@ template {
   max-height: 80px;
   width: 100%;
 }
-/* line 40, ../sass/layout/_header.scss */
+/* line 30, ../sass/layout/_header.scss */
 .l-header button, .l-header input {
   display: none;
 }
 
 @supports (display: grid) {
-  /* line 50, ../sass/layout/_header.scss */
+  /* line 40, ../sass/layout/_header.scss */
   .l-header {
     display: -ms-grid;
     display: grid;
@@ -961,29 +970,29 @@ template {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 60, ../sass/layout/_header.scss */
+  /* line 50, ../sass/layout/_header.scss */
   .l-header__inner {
     grid-column: col 1/ span 12;
   }
 }
-/* line 73, ../sass/layout/_header.scss */
+/* line 63, ../sass/layout/_header.scss */
 .slider .field-items {
   color: #fff;
   text-align: center;
 }
-/* line 77, ../sass/layout/_header.scss */
+/* line 67, ../sass/layout/_header.scss */
 .slider .field-items p {
   margin-bottom: 1.385em;
   line-height: 1.625em;
 }
-/* line 82, ../sass/layout/_header.scss */
+/* line 72, ../sass/layout/_header.scss */
 .slider .field-items h1 {
   font-size: 2.5em;
   text-transform: uppercase;
   margin-bottom: 0.625em;
 }
 
-/* line 91, ../sass/layout/_header.scss */
+/* line 81, ../sass/layout/_header.scss */
 .pane-style-full {
   background-size: cover;
   overflow: auto;
@@ -992,7 +1001,7 @@ template {
   height: 458px;
 }
 
-/* line 98, ../sass/layout/_header.scss */
+/* line 88, ../sass/layout/_header.scss */
 .hero-container {
   background-size: cover;
   overflow: auto;
@@ -1001,7 +1010,7 @@ template {
   height: 458px;
 }
 
-/* line 105, ../sass/layout/_header.scss */
+/* line 97, ../sass/layout/_header.scss */
 .hero-container__content {
   margin: auto;
   max-width: 1110px;
@@ -1009,19 +1018,19 @@ template {
   text-align: center;
   color: white;
 }
-/* line 112, ../sass/layout/_header.scss */
+/* line 104, ../sass/layout/_header.scss */
 .hero-container__content h1 {
   font-family: "MuseoSans Rounded", sans-serif;
   text-transform: uppercase;
   font-size: 3.375em;
   letter-spacing: 0.0125em;
 }
-/* line 118, ../sass/layout/_header.scss */
+/* line 110, ../sass/layout/_header.scss */
 .hero-container__content p {
   padding-bottom: 1.9em;
   letter-spacing: 0.0125em;
 }
-/* line 122, ../sass/layout/_header.scss */
+/* line 114, ../sass/layout/_header.scss */
 .hero-container__content .hero-titles {
   font-family: "OpenSans", sans-serif;
   font-size: 1.01em;
@@ -1029,7 +1038,31 @@ template {
   letter-spacing: 1px;
   text-shadow: 0.3px 0.3px #252728;
 }
+@media only screen and (max-width: 40em) {
+  /* line 123, ../sass/layout/_header.scss */
+  .hero-container__content h1 {
+    font-size: 2.375em;
+    letter-spacing: 0.0125em;
+  }
+  /* line 127, ../sass/layout/_header.scss */
+  .hero-container__content p {
+    padding-bottom: 1.9em;
+  }
+  /* line 130, ../sass/layout/_header.scss */
+  .hero-container__content .hero-titles {
+    font-size: 1em;
+    line-height: 1.2em;
+  }
+}
 
+@media only screen and (max-width: 40em) {
+  /* line 139, ../sass/layout/_header.scss */
+  .hero-container__content {
+    margin: auto;
+    max-width: 100%;
+    padding: 1em;
+  }
+}
 /*--------------------------------------------------------------
 ## Footer Region
 --------------------------------------------------------------*/
@@ -1113,12 +1146,26 @@ footer p {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-/* line 24, ../sass/layout/_panels.scss */
+@media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+  /* line 15, ../sass/layout/_panels.scss */
+  .l-pane-region__inner .fieldable-panels-pane .field-item {
+    justify-content: space-evenly;
+    padding-left: 0.999em;
+  }
+}
+@media only screen and (max-width: 40em) {
+  /* line 15, ../sass/layout/_panels.scss */
+  .l-pane-region__inner .fieldable-panels-pane .field-item {
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* line 36, ../sass/layout/_panels.scss */
 .l-pane-region__inner .fieldable-panels-pane img {
   width: auto;
   height: 100px;
 }
-/* line 28, ../sass/layout/_panels.scss */
+/* line 40, ../sass/layout/_panels.scss */
 .l-pane-region__inner .fieldable-panels-pane .field-item > div {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 33.3333%;
@@ -1127,7 +1174,13 @@ footer p {
   padding: 1em 0 0 1em;
   text-align: center;
 }
-/* line 37, ../sass/layout/_panels.scss */
+@media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+  /* line 40, ../sass/layout/_panels.scss */
+  .l-pane-region__inner .fieldable-panels-pane .field-item > div {
+    padding: 1em 1em 0 1em;
+  }
+}
+/* line 53, ../sass/layout/_panels.scss */
 .l-pane-region__inner .fieldable-panels-pane a {
   background-color: transparent;
   border: solid 1px #61c0bd;
@@ -1143,7 +1196,7 @@ footer p {
   display: inline-block;
   height: 40px;
 }
-/* line 55, ../sass/layout/_panels.scss */
+/* line 71, ../sass/layout/_panels.scss */
 .l-pane-region__inner .pane-title {
   text-align: center;
   font-size: 1.7em;
@@ -1151,14 +1204,14 @@ footer p {
   margin-bottom: 1em;
   font-family: "MuseoSans 500";
 }
-/* line 62, ../sass/layout/_panels.scss */
+/* line 78, ../sass/layout/_panels.scss */
 .l-pane-region__inner h3 {
   text-transform: uppercase;
   margin-bottom: 1em;
   margin-top: 2.6em;
   font-family: "MuseoSans 500";
 }
-/* line 68, ../sass/layout/_panels.scss */
+/* line 84, ../sass/layout/_panels.scss */
 .l-pane-region__inner p {
   font-family: "MuseoSans 500";
   font-size: 0.9375em;
@@ -1166,7 +1219,7 @@ footer p {
 }
 
 @supports (display: grid) {
-  /* line 82, ../sass/layout/_panels.scss */
+  /* line 98, ../sass/layout/_panels.scss */
   .l-pane-region__inner .pane-content {
     display: -ms-grid;
     display: grid;
@@ -1176,25 +1229,32 @@ footer p {
     margin: auto;
     max-width: 1120px;
   }
-  /* line 91, ../sass/layout/_panels.scss */
+  /* line 107, ../sass/layout/_panels.scss */
   .l-pane-region__inner .fieldable-panels-pane {
     grid-column: col 1 / span 12;
   }
 }
-/* line 98, ../sass/layout/_panels.scss */
+@media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+  /* line 114, ../sass/layout/_panels.scss */
+  .l-pane-region__inner .fieldable-panels-pane {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+/* line 122, ../sass/layout/_panels.scss */
 .members {
   background: #f1f2f5;
   padding-bottom: 0.8em;
   padding-top: 0;
 }
-/* line 103, ../sass/layout/_panels.scss */
+/* line 127, ../sass/layout/_panels.scss */
 .members .pane-title {
   text-align: center;
   font-size: 1.7em;
   text-transform: uppercase;
   margin-bottom: 1em;
 }
-/* line 109, ../sass/layout/_panels.scss */
+/* line 133, ../sass/layout/_panels.scss */
 .members .field-item > * {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -1205,12 +1265,12 @@ footer p {
   background-color: transparent;
   border-radius: 0;
 }
-/* line 119, ../sass/layout/_panels.scss */
+/* line 143, ../sass/layout/_panels.scss */
 .members .field-item > * img {
   width: 55%;
 }
 
-/* line 126, ../sass/layout/_panels.scss */
+/* line 150, ../sass/layout/_panels.scss */
 .panels-list > * {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -1219,28 +1279,34 @@ footer p {
   padding: 1em 0 0 1em;
 }
 
-/* line 134, ../sass/layout/_panels.scss */
+/* line 158, ../sass/layout/_panels.scss */
 .pane-list__desc {
   padding-bottom: 5em;
 }
+@media only screen and (max-width: 40em) {
+  /* line 158, ../sass/layout/_panels.scss */
+  .pane-list__desc {
+    padding-bottom: 2em;
+  }
+}
 
-/* line 139, ../sass/layout/_panels.scss */
+/* line 169, ../sass/layout/_panels.scss */
 .l-pane-region__inner .view-id-blogs {
   grid-column: col 1 / span 12;
 }
 
-/* line 142, ../sass/layout/_panels.scss */
+/* line 172, ../sass/layout/_panels.scss */
 .blog {
   text-align: left;
 }
-/* line 145, ../sass/layout/_panels.scss */
+/* line 175, ../sass/layout/_panels.scss */
 .blog .pane-title {
   text-align: center;
   font-size: 1.7em;
   text-transform: uppercase;
   margin-bottom: 0;
 }
-/* line 151, ../sass/layout/_panels.scss */
+/* line 181, ../sass/layout/_panels.scss */
 .blog .panel-blog__title {
   margin-bottom: 1em;
   margin-top: 1em;
@@ -1250,7 +1316,7 @@ footer p {
   border-color: #f1f2f5;
   font-weight: 700;
 }
-/* line 160, ../sass/layout/_panels.scss */
+/* line 190, ../sass/layout/_panels.scss */
 .blog .panel-blog__date {
   margin-bottom: 1em;
   margin-top: 0.3em;
@@ -1262,7 +1328,7 @@ footer p {
 }
 
 @supports (display: grid) {
-  /* line 174, ../sass/layout/_panels.scss */
+  /* line 204, ../sass/layout/_panels.scss */
   .panels-list {
     display: -ms-grid;
     display: grid;
@@ -1271,17 +1337,24 @@ footer p {
     grid-template-columns: repeat(12, [col] 1fr );
   }
 
-  /* line 181, ../sass/layout/_panels.scss */
+  /* line 211, ../sass/layout/_panels.scss */
   .panels-list > * {
     grid-column: col 1/ span 12;
   }
 }
-/* line 187, ../sass/layout/_panels.scss */
+/* line 217, ../sass/layout/_panels.scss */
 .mission-container {
   background-color: #f1f2f5;
   padding-bottom: 3.7em;
 }
-/* line 190, ../sass/layout/_panels.scss */
+@media only screen and (max-width: 40em) {
+  /* line 217, ../sass/layout/_panels.scss */
+  .mission-container {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+/* line 226, ../sass/layout/_panels.scss */
 .mission-container .fieldable-panels-pane a {
   background-color: transparent;
   border: none;
@@ -1298,7 +1371,7 @@ footer p {
   transform: translateY(-275%);
   top: -275%;
 }
-/* line 207, ../sass/layout/_panels.scss */
+/* line 243, ../sass/layout/_panels.scss */
 .mission-container .fieldable-panels-pane .field-item > div {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 31.55%;
@@ -1311,7 +1384,14 @@ footer p {
   font-family: "MuseoSans 500";
   max-height: 170px;
 }
-/* line 219, ../sass/layout/_panels.scss */
+@media only screen and (max-width: 40em) {
+  /* line 243, ../sass/layout/_panels.scss */
+  .mission-container .fieldable-panels-pane .field-item > div {
+    flex: 0 0 100%;
+    margin-top: 5em;
+  }
+}
+/* line 262, ../sass/layout/_panels.scss */
 .mission-container .fieldable-panels-pane img {
   width: auto;
   max-height: 180px;
@@ -1325,25 +1405,25 @@ footer p {
   border-radius: 50px;
   transform: translateY(-25%);
 }
-/* line 232, ../sass/layout/_panels.scss */
+/* line 275, ../sass/layout/_panels.scss */
 .mission-container .fieldable-panels-pane h3 {
   margin-bottom: 0em;
   margin-top: 0em;
 }
-/* line 236, ../sass/layout/_panels.scss */
+/* line 279, ../sass/layout/_panels.scss */
 .mission-container .fieldable-panels-pane p {
   font-size: 0.9em;
   font-weight: 900;
   transform: translateY(-35%);
   top: -35%;
 }
-/* line 242, ../sass/layout/_panels.scss */
+/* line 285, ../sass/layout/_panels.scss */
 .mission-container .fieldable-panels-pane .field.field-name-field-involve {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 3em;
 }
 
-/* line 252, ../sass/layout/_panels.scss */
+/* line 295, ../sass/layout/_panels.scss */
 .members .fieldable-panels-pane .field-item > div {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -1355,12 +1435,18 @@ footer p {
   border-radius: 0;
   font-family: "MuseoSans 500";
 }
-/* line 263, ../sass/layout/_panels.scss */
+/* line 306, ../sass/layout/_panels.scss */
 .members .fieldable-panels-pane img {
   width: 60%;
   height: auto;
 }
-/* line 267, ../sass/layout/_panels.scss */
+@media only screen and (max-width: 40em) {
+  /* line 306, ../sass/layout/_panels.scss */
+  .members .fieldable-panels-pane img {
+    width: 100%;
+  }
+}
+/* line 313, ../sass/layout/_panels.scss */
 .members .fieldable-panels-pane a {
   background-color: transparent;
   border: none;
@@ -1376,7 +1462,7 @@ footer p {
   display: none;
   height: 40px;
 }
-/* line 282, ../sass/layout/_panels.scss */
+/* line 328, ../sass/layout/_panels.scss */
 .members .fieldable-panels-pane .flex-direction-nav {
   display: none;
 }
