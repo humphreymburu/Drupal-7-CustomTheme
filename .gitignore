@@ -1,0 +1,17 @@
+sites/*/settings*.php
+
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
+.DS_Store
+.htaccess
+
+*.html humans.txt robots.txt
+.sass-cache
+.sass-cache/
+
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

@@ -1,0 +1,24 @@
+
+
+.wrapper {
+	margin: 0 auto;
+    background-color: red;
+	width: 100%;
+	max-width: 79.0625em;
+}
+
+   /* Layout with CSS Grid */
+	@supports (display: grid) {
+		
+		.wrapper {
+			display: -ms-grid;
+			display: grid;
+			grid-gap: 0.125em;	
+			-ms-grid-columns: unquote("repeat(12, [col] 1fr )");	
+					grid-template-columns: unquote("repeat(12, [col] 1fr )");
+		}
+		.wrapper > * {
+			grid-column: col / span 12;
+		}
+		
+	}
